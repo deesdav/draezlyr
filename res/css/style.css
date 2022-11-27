@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+* {
+    user-select: none;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 900;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+ body {
+    background-color: black;
+    border-left: 5px solid rgba(137, 43, 226, 0.71);
+    border-right: 5px solid rgba(137, 43, 226, 0.71);
+    border-bottom: none;
+    border-top: none;
+    border-radius: 1em;
+    color: black;
+    height: fit-content;
+    overflow: auto;
+    background-image: none;
+}
+
+#container {
+    width: 100%;
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainHeadLine {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 1em;
+    color: white;
+    display: block;
+}
+
+
+#aboutdraezlyr {
+    height: 600px;
+    width: 500px;
+    display: block;
+    margin: auto;
+    border: 10px solid #333;
+    border-radius: 1em;
+    background-color: white;
+}
+
+#aboutdraezlyr h2 {
+    text-align: center;
+    font-size: x-large;
+}
+
+#aboutdraezlyr p {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#aboutdraezlyr #draezlyrImage {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 650px;
+}
+
+button {
+    border: 3px solid #333;
+    color: rgb(245, 245, 245);
+    background-color: rgba(137, 43, 226, 0.737);
+    padding: 1em;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 1em;
+    transition: .5s;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: white;
+    color: #333;
+    border-radius: 1em;
+}
+
+#equip {
+    position: absolute;
+    left: 715px;
+    bottom: 100px;
+    transform: scale(1.1);
+}
+
+#merchant {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    transform: scale(1.5);
+}
+
+#shotRange {
+    position: absolute;
+    right: 300px;
+    top: 150px;
+    transform: scale(1.5);
+
+}
+
+#about-knight {
+    position: absolute;
+    left: 300px;
+    bottom: 150px;
+    transform: scale(1.5);
+}
+
+#draezlyrImage {
+    animation: powerOfDraezlyr 1s infinite alternate linear;
+    border-radius: 2em;
+}
+
+@keyframes powerOfDraezlyr {
+    0% {
+        box-shadow: 0px 0px 10px blueviolet
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 100px purple
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px blueviolet
+    }
+
+    ;
+}
+
+#heroIdle,
+#heroRun,
+#heroAttack {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 250px;
+    left: 550px;
+    border-radius: 200em;
+    padding: 0;
+    margin: 0;
+    display: none;
+    transition: .5s;
+    animation: none;
+}
+@keyframes rune {
+    0%{box-shadow: 0px 0px 1000px 10px rgb(140, 0, 128) inset;};
+    50%{box-shadow: 0px 0px 1000px 50px rgb(70, 1, 65) inset;};
+    100%{box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;};
+}
+
+#enemy1 {
+    width: 144px;
+    height: 217px;
+    position: absolute;
+    top: 370px;
+    right: 550px;
+    display: none;
+    transition: .5s;
+    transform: scaleX(-1);
+    cursor: crosshair;
+
+}
+
+#yourHP {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: blueviolet;
+    background-color: white;
+    border: 3px solid #333;
+    padding: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: none;
+}
+
+#xp {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: blueviolet;
+    background-color: white;
+    border: 3px solid #333;
+    padding: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+}
+
+#enemy1HP {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: blueviolet;
+    background-color: white;
+    border: 3px solid #333;
+    padding: 1em;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: none;
+}
+
+#attack {
+    position: absolute;
+    left: 650px;
+    top: 600px;
+    height: 150px;
+    width: 150px;
+    padding: 1em;
+    cursor: pointer;
+    display: none;
+    background-color: white;
+    border: 5px solid blueviolet;
+    border-radius: 3em;
+}
+
+i {
+    font-size: 80px;
+}
+
+#info {
+    text-align: center;
+    color: white;
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 300px;
+}
+
+#gameover {
+    display: none;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    text-align: center;
+    font-size: 200px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.638);
+
+}
+
+#backButton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+
+}
+
+#backButtonProblem {
+    position: absolute;
+    top: 400px;
+    right: 200px;
+    color: #333;
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    border: 5px solid blueviolet;
+    display: block;
+    height: 120px;
+    width: 220px;
+    font-weight: 900;
+}
+
+#merchantOffers {
+    height: 150px;
+    width: 820px;
+    display: none;
+    margin: auto;
+    border: 10px solid #333;
+    border-radius: 1em;
+    background-color: white;
+    position: absolute;
+    top: 500px;
+    left: 400px;
+
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#merchantOffers button {
+    width: 260px;
+    height: 80px;
+    margin: auto;
+    font-size: large;
+    padding: 0.5em;
+    display: block;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#merchantOffers div {
+    position: absolute;
+    bottom: 30px;
+}
+
+.upgrade1 {
+    position: absolute;
+    left: 100px;
+
+}
+
+.upgrade2 {
+    left: 360px;
+
+}
+
+.upgrade3 {
+    right: 70px;
+
+}
+
+#practiseRound {
+    display: block;
+    margin: auto;
+    background-color: white;
+    color: #333;
+    padding: 1em;
+    border: 3px solid #333;
+    text-transform: uppercase;
+    transform: scale(0.9);
+    position: absolute;
+    bottom: 40px;
+    left: 650px;
+}
+
+#round {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    left: 750px;
+    background-color: white;
+    color: blueviolet;
+    padding: 1em;
+    border: 3px solid #333;
+    text-transform: uppercase;
+    transform: scale(1.2);
+}
+
+#shotRangeContainer {
+    display: none;
+    margin: auto;
+   position: absolute;
+   top: 0;
+   left: 500px;
+    
+}
+
+#shotRangeContainer h2 {
+    color: gold;
+    text-shadow: 0px 1px 10px white;
+    padding: 1em;
+    margin: auto;
+   font-size: xx-large;
+}
+
+.grid {
+    width: 620px;
+    height: 620px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.42);
+    margin: auto;
+    background-image: url(../img/prison.bars.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 760px;
+
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: 3px solid blueviolet;
+   cursor: url(../img/cursor.draezlyr.png), auto;
+    transition: 0.5s;
+    
+}
+.square:hover{
+    
+    border: 3px solid gold;
+}
+
+.target {
+    background-image: url(../img/enemy1.png);
+    background-size: cover;
+    transition: .5s;
+   
+}
+
+.target:hover {
+    background-color: gold;
+    transform: rotate(5deg);
+    opacity: 0.5;
+    
+}

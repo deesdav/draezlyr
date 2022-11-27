@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draezlyr Sword Adventure</title>
+    <link rel="stylesheet" href="./res/css/style.css">
+    <link rel="shortcut icon" href="./res/img/draezlyr.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e25729b0c0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+    <h1 id="mainHeadLine">Welcome in <span style="color: blueviolet; text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blueviolet, 0 0 0.2em blueviolet;">Draezlyr Sword Adventure</span></h1>
+    <div id="aboutdraezlyr">
+        <h2>What is Draezlyr Sword?</h2>
+        <p>Draezlyr Sword is a mytical weapon. Thanks to this weapon you have infinity regeneration by + 1hp very faster.</p>
+        <p id="practiseRound">First round is practise round</p>
+        <img src="./res/img/draezlyr.png" alt="" id="draezlyrImage">
+        <button id="equip">EQUIP NOW AND FIGHT</button>
+        <button id="merchant">XP merchant</button>
+        <button id="shotRange">shotting range</button>
+        <button id="about-knight">about you</button>
+        
+        
+    </div>
+</div>
+<img src="./res/img/hero.idle.png" alt="" id="heroIdle">
+<img src="./res/img/hero.attack.png" alt="" id="heroAttack">
+<img src="./res/img/enemy1.png" alt="" id="enemy1" title="Impegnir">
+<div id="yourHP" title="your health points">0</div>
+<div id="enemy1HP" title="enemy health points">0</div>
+<div id="xp">your current xp: 0</div>
+<div id="info">info: </div>
+<h2 id="gameover">GAME OVER</h2>
+<button id="backButton">back to main menu</button>
+<div id="backButtonProblem">If somehow you are too quick and gameover will appear here just refresh the page or click on equip.</div>
+<div id="merchantOffers">
+    <button id="upgradeHealth"> health: 30 xp</button>
+    <button id="upgradeDamage"> damage: 30 xp</button>
+    <button id="upgradeRegeneration"> regeneration: 30 xp</button>
+    <div class="upgrade1">health + 10</div>
+    <div class="upgrade2">damage + 10</div>
+    <div class="upgrade3">regeneration + 10</div>
+</div>
+
+<div id="round">Practise round</div>
+
+<div id="shotRangeContainer">
+    <h2>your xp + <span id="score">0</span></h2>
+  
+    <div class="grid">
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+      <div class="square" id="9"></div>
+     
+    </div>
+</div>
+<iframe style="display: none; margin: auto;" width="560" height="315" src="https://www.youtube.com/embed/5F5dgg1eeGE?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <script src="./res/js/main.js"></script>
+</body>
+</html>
