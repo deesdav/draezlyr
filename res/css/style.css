@@ -43,7 +43,7 @@ html{
 
 #aboutdraezlyr {
     height: 600px;
-    width: 500px;
+    width: 480px;
     display: block;
     margin: auto;
     border: 10px solid #333;
@@ -61,11 +61,11 @@ html{
     font-weight: bold;
 }
 
-#aboutdraezlyr #draezlyrImage {
+#draezlyrImage {
     height: 300px;
     width: 300px;
-    position: absolute;
-    left: 650px;
+    margin: auto;
+    display: block;
 }
 
 button {
@@ -87,9 +87,8 @@ button:hover {
 }
 
 #equip {
-    position: absolute;
-    left: 715px;
-    bottom: 100px;
+    display: block;
+    margin: 20px auto;
     transform: scale(1.1);
 }
 
@@ -108,11 +107,32 @@ button:hover {
 
 }
 
-#about-knight {
+#portals {
     position: absolute;
+    color: rgba(255, 255, 255, 0.844);
     left: 300px;
     bottom: 150px;
     transform: scale(1.5);
+    animation: portalsBackground 5s alternate-reverse linear infinite;
+    transition: 0.5s;
+    text-shadow: 1px 1px 1px black;
+}
+#portals:hover{
+    color: rgba(255, 255, 255, 0.844);
+    transform: scale(1.7);
+}
+
+@keyframes portalsBackground{
+    10%{background-color: #F5F65D;}
+    20%{background-color: #0ED6BD;}
+    30%{background-color: #CEF0F9;}
+    40%{background-color: #0DA5CE;}
+    50%{background-color: #065C72;}
+    60%{background-color: #860111;}
+    70%{background-color: #FF4605;}
+    80%{background-color: #FFD729;}
+    90%{background-color: #FA7900;}
+    100%{background-color: #E71E02}
 }
 
 #draezlyrImage {
@@ -333,10 +353,9 @@ i {
     padding: 1em;
     border: 3px solid #333;
     text-transform: uppercase;
+    text-align: center;
     transform: scale(0.9);
-    position: absolute;
-    bottom: 40px;
-    left: 650px;
+    
 }
 
 #round {

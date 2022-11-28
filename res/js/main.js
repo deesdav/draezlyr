@@ -15,7 +15,7 @@ const info = document.getElementById("info");
 const merchant = document.getElementById("merchant");
 const shottingRange = document.getElementById("shotRange");
 const shotRangeContainer = document.getElementById("shotRangeContainer");
-const aboutKnight = document.getElementById("about-knight");
+const portals = document.getElementById("portals");
 const backButtonProblem = document.getElementById("backButtonProblem");
 const merchantOffers = document.getElementById("merchantOffers");
 const practiseRound = document.getElementById("practiseRound");
@@ -37,7 +37,8 @@ let damage = 1;
 let xpPrice = 40;
 let xpPriceIncrease = 0;
 let xpIncrease = 10;
-let yourXP = 0;
+let yourXP = -10;
+let damageFromEnemy = 1;
 
 let roundIncrease = -1;
 
@@ -47,7 +48,7 @@ if (yourXP >= 30) {
 } else {
     merchant.style.display = "none";
 }
-if (yourXP >= 100) {
+if (yourXP >= 50) {
     shottingRange.style.display = "block";
 } else {
     shottingRange.style.display = "none";
@@ -86,7 +87,7 @@ upgradeHealth.onclick = () => {
     equip.style.display = "block";
     merchant.style.display = "none";
     shottingRange.style.display = "none";
-    aboutKnight.style.display = "block";
+    portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
     mainHeadLine.style.display = "block";
     draezlyrImage.style.display = "block";
@@ -131,7 +132,7 @@ upgradeDamage.onclick = () => {
     equip.style.display = "block";
     merchant.style.display = "none";
     shottingRange.style.display = "none";
-    aboutKnight.style.display = "block";
+    portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
     mainHeadLine.style.display = "block";
     draezlyrImage.style.display = "block";
@@ -175,7 +176,7 @@ upgradeRegeneration.onclick = () => {
     equip.style.display = "block";
     merchant.style.display = "none";
     shottingRange.style.display = "none";
-    aboutKnight.style.display = "block";
+    portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
     mainHeadLine.style.display = "block";
     draezlyrImage.style.display = "block";
@@ -264,10 +265,10 @@ equip.onclick = () => {
     enemy1.style.display = "block";
     info.style.display = "none";
     backButtonProblem.style.display = "none";
-    backButton.style.display = "none";
+  
     const myInterval = setInterval(() => {
-        yourHP.innerText--;
-
+        damageFromEnemy++;
+        yourHP.innerText-=damageFromEnemy;
         if (yourHP.innerText <= 0) {
             info.innerText = `information: you have died`;
             clearInterval(myInterval);
@@ -278,25 +279,38 @@ equip.onclick = () => {
             enemy1.style.display = "none";
             info.style.fontSize = "50px";
             info.style.display = "block";
-            heroAttack.style.display = "none";
+            heroAttack.style.display = "block";
             round.style.display = "none";
+            backButton.style.display = "block";
         }
-    }, 2000);
-    if (heroIdle.style.display = "block") {
-        backButton.style.display = "block";
-    } else {
-        backButton.style.display = "none";
-    }
+       if(enemy1HP.innerText <= 0) {
+            info.innerText = `information: The Impegnir has died`;
+            clearInterval(myInterval);
+            gameover.style.display = "block";
+            heroIdle.style.display = "none";
+            yourHP.style.display = "none";
+            enemy1HP.style.display = "none";
+            enemy1.style.display = "none";
+            info.style.fontSize = "50px";
+            info.style.display = "block";
+            heroAttack.style.display = "block";
+            round.style.display = "none";
+            yourXP+= 10;
+            xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
+            backButton.style.display = "block";
+        }
+    }, 1000);
     if (yourXP >= 30) {
         merchant.style.display = "block";
     } else {
         merchant.style.display = "none";
     }
-    if (yourXP >= 100) {
+    if (yourXP >= 50) {
         shottingRange.style.display = "block";
     } else {
         shottingRange.style.display = "none";
     }
+    
 
 }
 merchant.onclick = () => {
@@ -330,7 +344,6 @@ shottingRange.onclick = () => {
     document.body.style.borderLeft = "0px solid transparent";
     document.body.style.backgroundImage = "none";
     document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -341,16 +354,13 @@ shottingRange.onclick = () => {
     backButton.style.display = "block";
     backButtonProblem.style.opacity = "0";
     shotRangeContainer.style.display = "block";
-    
     enemy1.style.display = "none";
     info.style.display = "none";
-    clearInterval(myInterval);
-
 }
 backButton.onclick = () => {
     equip.style.display = "block";
-    shottingRange.style.display = "none";
-    aboutKnight.style.display = "block";
+    
+    portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
     mainHeadLine.style.display = "block";
     draezlyrImage.style.display = "block";
@@ -384,7 +394,7 @@ backButton.onclick = () => {
     } else {
         merchant.style.display = "none";
     }
-    if (yourXP >= 110) {
+    if (yourXP >= 60) {
         shottingRange.style.display = "block";
     } else {
         shottingRange.style.display = "none";
@@ -404,7 +414,7 @@ window.addEventListener("keyup", (e) => {
         setInterval(() => {
             yourHP.innerText = basicHP;
             basicHP += regeneration;
-            basicHP++;
+           
         }, 1000);
          break;
          
@@ -416,45 +426,6 @@ window.addEventListener("keyup", (e) => {
 
 
     
-
-const myInterval = setInterval(() => {
-    yourHP.innerText--;
-    if (yourHP.innerText <= 0) {
-        info.innerText = `information: you have died`;
-        clearInterval(myInterval);
-        gameover.style.display = "block";
-        heroIdle.style.display = "none";
-        yourHP.style.display = "none";
-        enemy1HP.style.display = "none";
-        enemy1.style.display = "none";
-        info.style.fontSize = "50px";
-        info.style.display = "block";
-        heroAttack.style.display = "none";
-    }
-}, 1000);
-
-if (mainHeadLine.style.display = "block") {
-    clearInterval(myInterval);
-    gameover.style.display = "none";
-}
-else {
-    const myInterval = setInterval(() => {
-        yourHP.innerText--;
-        if (yourHP.innerText <= 0) {
-            info.innerText = `information: you have died`;
-            clearInterval(myInterval);
-            gameover.style.display = "block";
-            heroIdle.style.display = "none";
-            yourHP.style.display = "none";
-            enemy1HP.style.display = "none";
-            enemy1.style.display = "none";
-            info.style.fontSize = "50px";
-            info.style.display = "block";
-            round.style.display = "none";
-            heroAttack.style.display = "none";
-        }
-    }, 10000);
-}
 const squares = document.querySelectorAll(".square");
 const target = document.querySelector(".target");
 
