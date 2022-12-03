@@ -21,7 +21,6 @@ html{
     color: black;
     height: fit-content;
     overflow: auto;
-    background-image: none;
 }
 
 #container {
@@ -283,16 +282,27 @@ i {
 #backButtonProblem {
     position: absolute;
     top: 400px;
-    right: 200px;
+    right: 150px;
     color: #333;
     background-color: white;
     padding: 1em;
     border-radius: 1em;
     border: 5px solid blueviolet;
     display: block;
-    height: 120px;
-    width: 220px;
+    height: 110px;
+    width: 320px;
     font-weight: 900;
+    transform: scale(1.1);
+}
+#backButtonProblem a{
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+    transition: 0.5s; 
+}
+#backButtonProblem a:hover{
+    text-decoration: underline;
+    color: black;
 }
 
 #merchantOffers {
@@ -428,4 +438,38 @@ i {
     transform: rotate(5deg);
     opacity: 0.5;
     
+}
+#portalsWarning{
+    display: none;
+    margin: auto;
+    position: absolute;
+    left: 450px;
+    top: 300px;
+    width: 700px;
+    height: 200px;
+    background-color: white;
+    border: 3px solid #333;
+    border-radius: 1em;
+    padding: 2em;
+    transform: scale(2.2);
+}
+#portalsWarning h2{
+    text-align: center;
+}
+#portalsWarning button{
+    text-align: center;
+    margin: auto;
+    display: block;
+    animation: portalsBackground 5s alternate-reverse linear infinite;
+    transition: .5s;
+}
+#portalsWarning button:hover{
+    animation: none;
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+#portalsWarning div{
+    text-align: justify;
+   
 }

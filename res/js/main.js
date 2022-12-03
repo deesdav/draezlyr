@@ -16,6 +16,8 @@ const merchant = document.getElementById("merchant");
 const shottingRange = document.getElementById("shotRange");
 const shotRangeContainer = document.getElementById("shotRangeContainer");
 const portals = document.getElementById("portals");
+const portalsWarning = document.getElementById("portalsWarning");
+const portalsWarningContinue = document.getElementById("portalsWarningContinue");
 const backButtonProblem = document.getElementById("backButtonProblem");
 const merchantOffers = document.getElementById("merchantOffers");
 const practiseRound = document.getElementById("practiseRound");
@@ -30,7 +32,7 @@ let heroMove = 30;
 let heroMoveTop = 250;
 let heroMoveLeft = 100;
 let basicHP = 50;
-let enemyBasicHP = 50;
+let enemyBasicHP = 25;
 let regeneration = 1;
 let damageUP = 0;
 let damage = 1;
@@ -48,7 +50,7 @@ if (yourXP >= 30) {
 } else {
     merchant.style.display = "none";
 }
-if (yourXP >= 50) {
+if (yourXP >= 60) {
     shottingRange.style.display = "block";
 } else {
     shottingRange.style.display = "none";
@@ -305,12 +307,15 @@ equip.onclick = () => {
     } else {
         merchant.style.display = "none";
     }
-    if (yourXP >= 50) {
+    if (yourXP >= 60) {
         shottingRange.style.display = "block";
     } else {
         shottingRange.style.display = "none";
     }
-    
+    if(practiseRound.style.display = "none"){
+        equip.style.marginTop += "30px";
+        aboutdraezlyr.style.height = "550px";
+    }
 
 }
 merchant.onclick = () => {
@@ -357,9 +362,69 @@ shottingRange.onclick = () => {
     enemy1.style.display = "none";
     info.style.display = "none";
 }
+portals.onclick = () => {
+    aboutdraezlyr.style.display = "none";
+    merchantOffers.style.display = "none"
+    mainHeadLine.style.display = "none";
+    draezlyrImage.style.display = "none";
+    document.body.style.borderRight = "0px solid transparent";
+    document.body.style.borderLeft = "0px solid transparent";
+    document.body.style.backgroundImage = "url(./res/img/portals.png)";
+    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    heroIdle.style.display = "none";
+    heroAttack.style.display = "none";
+    yourHP.style.display = "none";
+    enemy1HP.style.display = "none";
+    backButtonProblem.style.opacity = "0";
+    backButton.style.display = "block";
+    enemy1.style.display = "none";
+    info.style.display = "none";
+    portalsWarningContinue.style.display = "block";
+    if(yourXP <= 500){
+        portalsWarning.style.display = "block";
+    }else{
+        portalsWarning.style.display = "none";
+    } 
+}
+portalsWarningContinue.onclick = () => {
+    portalsWarning.style.display = "none";
+    equip.style.display = "block";
+    portalsWarning.style.display = "none";
+    portals.style.display = "block";
+    aboutdraezlyr.style.display = "block";
+    mainHeadLine.style.display = "block";
+    draezlyrImage.style.display = "block";
+    backButton.style.display = "none";
+    backButtonProblem.style.display = "block";
+    heroAttack.style.display = "none";
+    heroIdle.style.display = "none";
+    document.body.style.backgroundImage = "none";
+    merchantOffers.style.display = "none";
+    yourHP.style.display = "none";
+    backButtonProblem.style.opacity = "1";
+    enemy1.style.display = "none";
+    gameover.style.display = "none";
+    info.style.display = "none";
+    enemy1HP.innerText = enemyBasicHP;
+    upgradeHealth.style.display = "block";
+    upgradeDamage.style.display = "block";
+    upgradeRegeneration.style.display = "block";
+    yourHP.innerText = basicHP;
+    round.style.display = "none";
+    enemy1HP.style.display = "none";
+    document.body.style.backgroundColor = "black";
+    document.body.style.borderLeft = "5px solid rgba(137, 43, 226, 0.71)";
+    document.body.style.borderRight = "5px solid rgba(137, 43, 226, 0.71)";
+    gameover.style.display = "none";
+    info.style.display = "none";
+    shotRangeContainer.style.display = "none";
+}
 backButton.onclick = () => {
     equip.style.display = "block";
-    
+    portalsWarning.style.display = "none";
     portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
     mainHeadLine.style.display = "block";
@@ -394,7 +459,7 @@ backButton.onclick = () => {
     } else {
         merchant.style.display = "none";
     }
-    if (yourXP >= 60) {
+    if (yourXP >= 70) {
         shottingRange.style.display = "block";
     } else {
         shottingRange.style.display = "none";
