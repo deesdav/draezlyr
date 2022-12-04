@@ -124,7 +124,7 @@ upgradeDamage.onclick = () => {
     damage = 1;
     damage = damageUP;
     damageUP+=10;
-    yourXP -= xpPrice;
+    yourXP -= xpPrice; 
     heroAttack.style.animation = "rune 1s infinite alternate linear";
     heroIdle.style.animation = "rune 1s infinite alternate linear";
     xp.innerHTML = `your current xp: ${yourXP}`;
