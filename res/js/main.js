@@ -40,7 +40,7 @@ let basicHP = 100;
 let enemyBasicHP = 5;
 let regeneration = 1;
 let damageUP = 0;
-let damage = 5;
+let damage = 2;
 let xpPrice = 40;
 let xpPriceIncrease = 0;
 let xpIncrease = 10;
@@ -121,7 +121,7 @@ upgradeHealth.onclick = () => {
     document.body.style.borderRight = "5px solid rgba(137, 43, 226, 0.71)";
 }
 upgradeDamage.onclick = () => {
-    damage = 1;
+    damage = 2;
     damage = damageUP;
     damageUP+=10;
     yourXP -= xpPrice; 
