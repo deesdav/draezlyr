@@ -18,6 +18,11 @@ const shotRangeContainer = document.getElementById("shotRangeContainer");
 const portals = document.getElementById("portals");
 const portalsWarning = document.getElementById("portalsWarning");
 const portalsWarningContinue = document.getElementById("portalsWarningContinue");
+const twoPortals = document.getElementById("twoPortals");
+const thehell = document.getElementById("thehell");
+const hell = document.getElementById("hell");
+const theheaven = document.getElementById("theheaven");
+const heaven = document.getElementById("heaven");
 const backButtonProblem = document.getElementById("backButtonProblem");
 const merchantOffers = document.getElementById("merchantOffers");
 const practiseRound = document.getElementById("practiseRound");
@@ -31,11 +36,11 @@ const xp = document.getElementById("xp");
 let heroMove = 30;
 let heroMoveTop = 250;
 let heroMoveLeft = 100;
-let basicHP = 50;
-let enemyBasicHP = 25;
+let basicHP = 100;
+let enemyBasicHP = 5;
 let regeneration = 1;
 let damageUP = 0;
-let damage = 1;
+let damage = 5;
 let xpPrice = 40;
 let xpPriceIncrease = 0;
 let xpIncrease = 10;
@@ -116,6 +121,7 @@ upgradeHealth.onclick = () => {
     document.body.style.borderRight = "5px solid rgba(137, 43, 226, 0.71)";
 }
 upgradeDamage.onclick = () => {
+    damage = 1;
     damage = damageUP;
     damageUP+=10;
     yourXP -= xpPrice;
@@ -206,9 +212,9 @@ upgradeRegeneration.onclick = () => {
 }
 
 enemy1.onmousedown = () => {
-
+        enemy1.style.right = "525px";
     if (enemy1HP.innerText <= 0) {
-        info.innerText = `information: the enemy has been defeated`;
+        info.innerText = `information: the enemy has been defeated and you earned + 10 xp`;
         clearInterval(myInterval);
         gameover.style.display = "block";
         heroIdle.style.display = "none";
@@ -229,9 +235,7 @@ enemy1.onmousedown = () => {
         enemy1HP.innerText -= damage;
 
     }
-    if(enemy1HP <= 30){
-        damage = 1;
-    }
+   
     heroIdle.style.display = "none";
     heroAttack.style.display = "block";
 }
@@ -239,6 +243,7 @@ enemy1.onmouseup = () => {
     heroIdle.style.left = "0px";
     heroIdle.style.display = "block";
     heroAttack.style.display = "none";
+    enemy1.style.right = "550px";
 }
 
 equip.onclick = () => {
@@ -272,7 +277,7 @@ equip.onclick = () => {
         damageFromEnemy++;
         yourHP.innerText-=damageFromEnemy;
         if (yourHP.innerText <= 0) {
-            info.innerText = `information: you have died`;
+            info.innerText = `information: you have died and you earned + 10 xp`;
             clearInterval(myInterval);
             gameover.style.display = "block";
             heroIdle.style.display = "none";
@@ -286,7 +291,7 @@ equip.onclick = () => {
             backButton.style.display = "block";
         }
        if(enemy1HP.innerText <= 0) {
-            info.innerText = `information: The Impegnir has died`;
+            info.innerText = `information: The Impegnir has died and you earned + 10 xp`;
             clearInterval(myInterval);
             gameover.style.display = "block";
             heroIdle.style.display = "none";
@@ -383,11 +388,40 @@ portals.onclick = () => {
     enemy1.style.display = "none";
     info.style.display = "none";
     portalsWarningContinue.style.display = "block";
-    if(yourXP <= 500){
-        portalsWarning.style.display = "block";
-    }else{
-        portalsWarning.style.display = "none";
-    } 
+  
+    
+    twoPortals.style.display = "block";
+   // if(yourXP <= 500){
+   //     portalsWarning.style.display = "block";
+ //       twoPortals.style.display = "none";
+  //  }else{
+  //      portalsWarning.style.display = "none";
+  //      twoPortals.style.display = "block";
+ //   } 
+}
+thehell.onmouseover = () => {
+    hell.style.color = "#F11514";
+    hell.style.transform = "scale(2)";
+    hell.style.transition = "0.5s";
+    thehell.style.transform = "scale(0.4)";
+}
+theheaven.onmouseover = () => {
+    heaven.style.color = "#bdb643";
+    heaven.style.transform = "scale(2)";
+    heaven.style.transition = "0.5s";
+    theheaven.style.transform = "scale(0.4)";
+}
+thehell.onmouseout = () => {
+    hell.style.color = "white";
+    hell.style.transform = "none";
+    hell.style.transition = "0.5s";
+    thehell.style.transform = "scale(0.3)";
+}
+theheaven.onmouseout = () => {
+    heaven.style.color = "white";
+    heaven.style.transform = "none";
+    heaven.style.transition = "0.5s";
+    theheaven.style.transform = "scale(0.3)";
 }
 portalsWarningContinue.onclick = () => {
     portalsWarning.style.display = "none";
@@ -421,9 +455,11 @@ portalsWarningContinue.onclick = () => {
     gameover.style.display = "none";
     info.style.display = "none";
     shotRangeContainer.style.display = "none";
+    twoPortals.style.display = "none";
 }
 backButton.onclick = () => {
     equip.style.display = "block";
+    twoPortals.style.display = "none";
     portalsWarning.style.display = "none";
     portals.style.display = "block";
     aboutdraezlyr.style.display = "block";
