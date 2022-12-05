@@ -36,7 +36,7 @@ const xp = document.getElementById("xp");
 let heroMove = 30;
 let heroMoveTop = 250;
 let heroMoveLeft = 100;
-let basicHP = 100;
+let basicHP = 50;
 let enemyBasicHP = 5;
 let regeneration = 1;
 let damageUP = 0;
@@ -277,7 +277,7 @@ equip.onclick = () => {
         damageFromEnemy++;
         yourHP.innerText-=damageFromEnemy;
         if (yourHP.innerText <= 0) {
-            info.innerText = `information: you have died and you earned + 10 xp`;
+            info.innerText = `information: you have died`;
             clearInterval(myInterval);
             gameover.style.display = "block";
             heroIdle.style.display = "none";
@@ -422,6 +422,97 @@ theheaven.onmouseout = () => {
     heaven.style.transform = "none";
     heaven.style.transition = "0.5s";
     theheaven.style.transform = "scale(0.3)";
+}
+thehell.onclick = () => {
+    aboutdraezlyr.style.display = "none";
+    enemyBasicHP += 10; 
+    mainHeadLine.style.display = "none";
+    draezlyrImage.style.display = "none";
+    document.body.style.borderRight = "0px solid transparent";
+    document.body.style.borderLeft = "0px solid transparent";
+    document.body.style.backgroundImage = "url(./res/img/)";
+    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    heroIdle.style.display = "block";
+    gameover.style.display = "none";
+    heroAttack.style.display = "none";
+    yourHP.style.display = "block";
+    enemy1HP.innerText = enemyBasicHP;
+    yourHP.innerText = basicHP;
+    enemy1HP.style.display = "block";
+    practiseRound.style.display = "none";
+    
+    enemy1.style.display = "block";
+    enemy1HP.innerHTML = 500;
+    info.style.display = "none";
+    backButtonProblem.style.display = "none";
+    twoPortals.style.display = "none";
+    yourHP.style.color = "red";
+    enemy1HP.style.color = "red";
+    backButton.style.backgroundColor = "red";
+    backButton.style.display = "none";
+    xp.style.color = "red";
+
+
+  
+    const myInterval = setInterval(() => {
+        damageFromEnemy++;
+        yourHP.innerText-=damageFromEnemy;
+        if (yourHP.innerText <= 0) {
+            info.innerText = `information: you have died`;
+            clearInterval(myInterval);
+            gameover.style.display = "block";
+            heroIdle.style.display = "none";
+            yourHP.style.display = "none";
+            enemy1HP.style.display = "none";
+            enemy1.style.display = "none";
+            info.style.fontSize = "50px";
+            info.style.display = "block";
+            heroAttack.style.display = "block";
+            round.style.display = "none";
+            backButton.style.display = "block";
+        }
+       if(enemy1HP.innerText <= 0) {
+            info.innerText = `information: Surtur has died and you earned + 10 xp`;
+            clearInterval(myInterval);
+            gameover.style.display = "block";
+            heroIdle.style.display = "none";
+            yourHP.style.display = "none";
+            enemy1HP.style.display = "none";
+            enemy1.style.display = "none";
+            info.style.fontSize = "50px";
+            info.style.display = "block";
+            heroAttack.style.display = "block";
+            round.style.display = "none";
+            yourXP+= 510; 
+            xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
+            backButton.style.display = "block";
+            heroAttack.src = "./res/img/helll.hero.attack.png";
+            heroIdle.src = "./res/img/hell.hero.idle.png";
+            thehell.style.display = "none";
+            hell.style.display = "block";
+            hell.innerText = `THE HELL IS COMPLETED`;
+            draezlyrImage.src = `./res/img/hell.draezlyr.png`;
+            equip.style.backgroundColor = "red";
+            
+        }
+    }, 1000);
+    if (yourXP >= 30) {
+        merchant.style.display = "block";
+    } else {
+        merchant.style.display = "none";
+    }
+    if (yourXP >= 60) {
+        shottingRange.style.display = "block";
+    } else {
+        shottingRange.style.display = "none";
+    }
+    if(practiseRound.style.display = "none"){
+        equip.style.marginTop += "30px";
+        aboutdraezlyr.style.height = "550px";
+    }
 }
 portalsWarningContinue.onclick = () => {
     portalsWarning.style.display = "none";

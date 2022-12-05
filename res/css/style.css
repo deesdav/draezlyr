@@ -196,8 +196,8 @@ button:hover {
 
 #yourHP {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 15px;
+    bottom: 15px;
     color: blueviolet;
     background-color: white;
     border: 3px solid #333;
@@ -222,8 +222,8 @@ button:hover {
 
 #enemy1HP {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 15px;
+    bottom: 15px;
     color: blueviolet;
     background-color: white;
     border: 3px solid #333;
