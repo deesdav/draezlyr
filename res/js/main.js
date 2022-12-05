@@ -33,6 +33,21 @@ const upgradeDamage = document.getElementById("upgradeDamage");
 const upgradeRegeneration = document.getElementById("upgradeRegeneration");
 const xp = document.getElementById("xp");
 
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+
+musicButton.onclick = () =>{
+    music.src = "https://www.youtube.com/embed/_k98FiylD2M?autoplay=1&loop=1";
+    musicButton.style.color = "blueviolet";
+    musicButton.style.backgroundColor = "white";
+}
+musicButton.onmouseover = () => {
+    music.src = "";
+    musicButton.style.color = "white";
+    musicButton.style.backgroundColor = "blueviolet";
+}
+
+
 let heroMove = 30;
 let heroMoveTop = 250;
 let heroMoveLeft = 100;

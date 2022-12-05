@@ -515,3 +515,12 @@ i {
     right: 365px;
     color: white;
 }
+#musicButton{
+    position: absolute;
+    top: 25px;
+    left: 250px;
+}
+#music{
+    display: none;
+    margin: auto;
+}
