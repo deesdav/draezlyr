@@ -27,6 +27,7 @@ const backButtonProblem = document.getElementById("backButtonProblem");
 const merchantOffers = document.getElementById("merchantOffers");
 const practiseRound = document.getElementById("practiseRound");
 const round = document.getElementById("round");
+const logo = document.getElementById("logo");
 
 const upgradeHealth = document.getElementById("upgradeHealth");
 const upgradeDamage = document.getElementById("upgradeDamage");
@@ -36,7 +37,7 @@ const xp = document.getElementById("xp");
 const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
 
-musicButton.onclick = () =>{
+musicButton.onclick = () => {
     music.src = "https://www.youtube.com/embed/_k98FiylD2M?autoplay=1&loop=1";
     musicButton.style.color = "blueviolet";
     musicButton.style.backgroundColor = "white";
@@ -78,13 +79,13 @@ if (yourXP >= 60) {
 
 
 //if(yourXP < xpPrice){
- //   upgradeHealth.style.display = "none";
-  //  upgradeDamage.style.display = "none";
-   // upgradeRegeneration.style.display = "none";
+//   upgradeHealth.style.display = "none";
+//  upgradeDamage.style.display = "none";
+// upgradeRegeneration.style.display = "none";
 //}else{
-  //  upgradeHealth.style.display = "block";
-  //  upgradeDamage.style.display = "block";
-   // upgradeRegeneration.style.display = "block";
+//  upgradeHealth.style.display = "block";
+//  upgradeDamage.style.display = "block";
+// upgradeRegeneration.style.display = "block";
 //}
 
 window.onload = () => {
@@ -138,12 +139,12 @@ upgradeHealth.onclick = () => {
 upgradeDamage.onclick = () => {
     damage = 1;
     damage = damageUP;
-    damageUP+=10;
-    yourXP -= xpPrice; 
+    damageUP += 10;
+    yourXP -= xpPrice;
     heroAttack.style.animation = "rune 1s infinite alternate linear";
     heroIdle.style.animation = "rune 1s infinite alternate linear";
     xp.innerHTML = `your current xp: ${yourXP}`;
-   
+
     if (damage += 10) {
         upgradeDamage.style.display = "none";
     }
@@ -182,7 +183,7 @@ upgradeDamage.onclick = () => {
     document.body.style.borderRight = "5px solid rgba(137, 43, 226, 0.71)";
 }
 upgradeRegeneration.onclick = () => {
-    regeneration+=10;
+    regeneration += 10;
     yourXP -= xpPrice;
     xpPrice += xpPriceIncrease;
     heroAttack.style.animation = "rune 1s infinite alternate linear";
@@ -227,7 +228,7 @@ upgradeRegeneration.onclick = () => {
 }
 
 enemy1.onmousedown = () => {
-        enemy1.style.right = "525px";
+    enemy1.style.right = "525px";
     if (enemy1HP.innerText <= 0) {
         info.innerText = `information: the enemy has been defeated and you earned + 10 xp`;
         clearInterval(myInterval);
@@ -250,7 +251,7 @@ enemy1.onmousedown = () => {
         enemy1HP.innerText -= damage;
 
     }
-   
+
     heroIdle.style.display = "none";
     heroAttack.style.display = "block";
 }
@@ -263,7 +264,7 @@ enemy1.onmouseup = () => {
 
 equip.onclick = () => {
     aboutdraezlyr.style.display = "none";
-    enemyBasicHP += 10; 
+    enemyBasicHP += 10;
     mainHeadLine.style.display = "none";
     draezlyrImage.style.display = "none";
     document.body.style.borderRight = "0px solid transparent";
@@ -287,10 +288,10 @@ equip.onclick = () => {
     enemy1.style.display = "block";
     info.style.display = "none";
     backButtonProblem.style.display = "none";
-  
+
     const myInterval = setInterval(() => {
         damageFromEnemy++;
-        yourHP.innerText-=damageFromEnemy;
+        yourHP.innerText -= damageFromEnemy;
         if (yourHP.innerText <= 0) {
             info.innerText = `information: you have died`;
             clearInterval(myInterval);
@@ -305,7 +306,7 @@ equip.onclick = () => {
             round.style.display = "none";
             backButton.style.display = "block";
         }
-       if(enemy1HP.innerText <= 0) {
+        if (enemy1HP.innerText <= 0) {
             info.innerText = `information: The Impegnir has died and you earned + 10 xp`;
             clearInterval(myInterval);
             gameover.style.display = "block";
@@ -317,7 +318,7 @@ equip.onclick = () => {
             info.style.display = "block";
             heroAttack.style.display = "block";
             round.style.display = "none";
-            yourXP+= 10;
+            yourXP += 10;
             xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
             backButton.style.display = "block";
         }
@@ -332,7 +333,7 @@ equip.onclick = () => {
     } else {
         shottingRange.style.display = "none";
     }
-    if(practiseRound.style.display = "none"){
+    if (practiseRound.style.display = "none") {
         equip.style.marginTop += "30px";
         aboutdraezlyr.style.height = "550px";
     }
@@ -383,6 +384,8 @@ shottingRange.onclick = () => {
     info.style.display = "none";
 }
 portals.onclick = () => {
+    theheaven.style.opacity = "1";
+    heaven.style.opacity = "1";
     aboutdraezlyr.style.display = "none";
     merchantOffers.style.display = "none"
     mainHeadLine.style.display = "none";
@@ -403,16 +406,15 @@ portals.onclick = () => {
     enemy1.style.display = "none";
     info.style.display = "none";
     portalsWarningContinue.style.display = "block";
-  
-    
-    twoPortals.style.display = "block";
-   // if(yourXP <= 500){
-   //     portalsWarning.style.display = "block";
- //       twoPortals.style.display = "none";
-  //  }else{
-  //      portalsWarning.style.display = "none";
-  //      twoPortals.style.display = "block";
- //   } 
+
+
+     if(yourXP <= 5){
+       portalsWarning.style.display = "block";
+           twoPortals.style.display = "none";
+      }else{
+         portalsWarning.style.display = "none";
+          twoPortals.style.display = "block";
+       } 
 }
 thehell.onmouseover = () => {
     hell.style.color = "#F11514";
@@ -440,7 +442,7 @@ theheaven.onmouseout = () => {
 }
 thehell.onclick = () => {
     aboutdraezlyr.style.display = "none";
-    enemyBasicHP += 10; 
+    enemyBasicHP += 10;
     mainHeadLine.style.display = "none";
     draezlyrImage.style.display = "none";
     document.body.style.borderRight = "0px solid transparent";
@@ -458,23 +460,21 @@ thehell.onclick = () => {
     yourHP.innerText = basicHP;
     enemy1HP.style.display = "block";
     practiseRound.style.display = "none";
-    
+
     enemy1.style.display = "block";
     enemy1HP.innerHTML = 500;
     info.style.display = "none";
     backButtonProblem.style.display = "none";
     twoPortals.style.display = "none";
-    yourHP.style.color = "red";
-    enemy1HP.style.color = "red";
-    backButton.style.backgroundColor = "red";
+
     backButton.style.display = "none";
-    xp.style.color = "red";
+    
 
 
-  
+
     const myInterval = setInterval(() => {
         damageFromEnemy++;
-        yourHP.innerText-=damageFromEnemy;
+        yourHP.innerText -= damageFromEnemy;
         if (yourHP.innerText <= 0) {
             info.innerText = `information: you have died`;
             clearInterval(myInterval);
@@ -489,7 +489,7 @@ thehell.onclick = () => {
             round.style.display = "none";
             backButton.style.display = "block";
         }
-       if(enemy1HP.innerText <= 0) {
+        if (enemy1HP.innerText <= 0) {
             info.innerText = `information: Surtur has died and you earned + 10 xp`;
             clearInterval(myInterval);
             gameover.style.display = "block";
@@ -501,17 +501,34 @@ thehell.onclick = () => {
             info.style.display = "block";
             heroAttack.style.display = "block";
             round.style.display = "none";
-            yourXP+= 510; 
+            yourXP += 510;
+            damage += 50;
+            basicHP += 50;
             xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
             backButton.style.display = "block";
             heroAttack.src = "./res/img/helll.hero.attack.png";
             heroIdle.src = "./res/img/hell.hero.idle.png";
-            thehell.style.display = "none";
+            thehell.style.left = "-1000px";
+            hell.style.transform = "scale(1.5)";
+            hell.style.color = "red";
+            hell.style.left = "300px";
+            hell.style.position = "absolute";
+            theheaven.style.opacity = "0";
+            heaven.style.opacity = "0";
             hell.style.display = "block";
             hell.innerText = `THE HELL IS COMPLETED`;
             draezlyrImage.src = `./res/img/hell.draezlyr.png`;
+            draezlyrImage.style.animation = "powerOfHellDraezlyr 1s infinite alternate linear";
             equip.style.backgroundColor = "red";
-            
+            yourHP.style.color = "red";
+            enemy1HP.style.color = "red";
+            backButton.style.backgroundColor = "red";
+            xp.style.color = "red";
+            logo.style.color = "red";
+            logo.style.textShadow = "1px 1px 2px rgb(255, 255, 255), 0 0 1em red, 0 0 0.2em red";
+            musicButton.style.backgroundColor = "red";
+            twoPortals.style.display = "block";
+
         }
     }, 1000);
     if (yourXP >= 30) {
@@ -524,7 +541,7 @@ thehell.onclick = () => {
     } else {
         shottingRange.style.display = "none";
     }
-    if(practiseRound.style.display = "none"){
+    if (practiseRound.style.display = "none") {
         equip.style.marginTop += "30px";
         aboutdraezlyr.style.height = "550px";
     }
@@ -617,14 +634,14 @@ window.addEventListener("load", () => {
 window.addEventListener("keyup", (e) => {
     console.log(e);
     switch (e.key) {
-        case "7","7","7","8": //regeneration
-        setInterval(() => {
-            yourHP.innerText = basicHP;
-            basicHP += regeneration;
-           
-        }, 1000);
-         break;
-         
+        case "7", "7", "7", "8": //regeneration
+            setInterval(() => {
+                yourHP.innerText = basicHP;
+                basicHP += regeneration;
+
+            }, 1000);
+            break;
+
     }
 
 
@@ -632,7 +649,7 @@ window.addEventListener("keyup", (e) => {
 
 
 
-    
+
 const squares = document.querySelectorAll(".square");
 const target = document.querySelector(".target");
 
@@ -644,32 +661,33 @@ let timerId = 0;
 
 //vyhledane funkce random a forEach
 function randomSquare() {
-  squares.forEach(square => {;
-    square.classList.remove("target");
-  })
+    squares.forEach(square => {
+        ;
+        square.classList.remove("target");
+    })
 
-  const randomSquare = squares[Math.floor(Math.random() * 9)];
-  randomSquare.classList.add("target");
+    const randomSquare = squares[Math.floor(Math.random() * 9)];
+    randomSquare.classList.add("target");
 
-  hitPosition = randomSquare.id;
+    hitPosition = randomSquare.id;
 }
 
 squares.forEach(square => {
-  square.addEventListener("mouseover", (k) => {
-    console.log(k);
-    
-    if (square.id == hitPosition) {
-      result+=10;
-      score.innerHTML = result;
-      hitPosition = 0;
-      yourXP+=10;
-      xp.innerHTML = `your current xp: ${yourXP}`;
-    }
-  })
+    square.addEventListener("mouseover", (k) => {
+        console.log(k);
+
+        if (square.id == hitPosition) {
+            result += 10;
+            score.innerHTML = result;
+            hitPosition = 0;
+            yourXP += 10;
+            xp.innerHTML = `your current xp: ${yourXP}`;
+        }
+    })
 })
 
 function movetarget() {
-  timerId = setInterval(randomSquare, 500);
+    timerId = setInterval(randomSquare, 500);
 }
 
 movetarget();

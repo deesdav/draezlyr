@@ -6,13 +6,14 @@
     font-weight: 900;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
-   
+
 }
 
 
- body {
+body {
     background-color: black;
     border-left: 5px solid rgba(137, 43, 226, 0.71);
     border-right: 5px solid rgba(137, 43, 226, 0.71);
@@ -116,27 +117,59 @@ button:hover {
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: 0.5s;
     text-shadow: 1px 1px 1px black;
+    
 }
-#portals:hover{
+
+#portals:hover {
     color: rgba(255, 255, 255, 0.844);
     transform: scale(1.7);
 }
 
-@keyframes portalsBackground{
-    10%{background-color: #F5F65D;}
-    20%{background-color: #0ED6BD;}
-    30%{background-color: #CEF0F9;}
-    40%{background-color: #0DA5CE;}
-    50%{background-color: #065C72;}
-    60%{background-color: #860111;}
-    70%{background-color: #FF4605;}
-    80%{background-color: #FFD729;}
-    90%{background-color: #FA7900;}
-    100%{background-color: #E71E02}
+@keyframes portalsBackground {
+    10% {
+        background-color: #F5F65D;
+    }
+
+    20% {
+        background-color: #0ED6BD;
+    }
+
+    30% {
+        background-color: #CEF0F9;
+    }
+
+    40% {
+        background-color: #0DA5CE;
+    }
+
+    50% {
+        background-color: #065C72;
+    }
+
+    60% {
+        background-color: #860111;
+    }
+
+    70% {
+        background-color: #FF4605;
+    }
+
+    80% {
+        background-color: #FFD729;
+    }
+
+    90% {
+        background-color: #FA7900;
+    }
+
+    100% {
+        background-color: #E71E02
+    }
 }
 
 #draezlyrImage {
     animation: powerOfDraezlyr 1s infinite alternate linear;
+    
     border-radius: 2em;
 }
 
@@ -159,6 +192,25 @@ button:hover {
 
     ;
 }
+@keyframes powerOfHellDraezlyr {
+    0% {
+        box-shadow: 0px 0px 10px #F11514
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 100px red
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px #F11514
+    }
+
+    ;
+}
 
 #heroIdle,
 #heroRun,
@@ -175,10 +227,25 @@ button:hover {
     transition: .5s;
     animation: none;
 }
+
 @keyframes rune {
-    0%{box-shadow: 0px 0px 1000px 10px rgb(140, 0, 128) inset;};
-    50%{box-shadow: 0px 0px 1000px 50px rgb(70, 1, 65) inset;};
-    100%{box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;};
+    0% {
+        box-shadow: 0px 0px 1000px 10px rgb(140, 0, 128) inset;
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 1000px 50px rgb(70, 1, 65) inset;
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;
+    }
+
+    ;
 }
 
 #enemy1 {
@@ -295,13 +362,15 @@ i {
     font-weight: 900;
     transform: scale(1.1);
 }
-#backButtonProblem a{
+
+#backButtonProblem a {
     text-decoration: none;
     color: blueviolet;
     font-weight: bold;
-    transition: 0.5s; 
+    transition: 0.5s;
 }
-#backButtonProblem a:hover{
+
+#backButtonProblem a:hover {
     text-decoration: underline;
     color: black;
 }
@@ -366,7 +435,7 @@ i {
     text-transform: uppercase;
     text-align: center;
     transform: scale(0.9);
-    
+
 }
 
 #round {
@@ -385,10 +454,10 @@ i {
 #shotRangeContainer {
     display: none;
     margin: auto;
-   position: absolute;
-   top: 0;
-   left: 500px;
-    
+    position: absolute;
+    top: 0;
+    left: 500px;
+
 }
 
 #shotRangeContainer h2 {
@@ -396,7 +465,7 @@ i {
     text-shadow: 0px 1px 10px white;
     padding: 1em;
     margin: auto;
-   font-size: xx-large;
+    font-size: xx-large;
 }
 
 .grid {
@@ -418,12 +487,13 @@ i {
     height: 200px;
     width: 200px;
     border: 3px solid blueviolet;
-   cursor: url(../img/cursor.draezlyr.png), auto;
+    cursor: url(../img/cursor.draezlyr.png), auto;
     transition: 0.5s;
-    
+
 }
-.square:hover{
-    
+
+.square:hover {
+
     border: 3px solid gold;
 }
 
@@ -431,16 +501,17 @@ i {
     background-image: url(../img/enemy1.png);
     background-size: cover;
     transition: .5s;
-   
+
 }
 
 .target:hover {
     background-color: gold;
     transform: rotate(5deg);
     opacity: 0.5;
-    
+
 }
-#portalsWarning{
+
+#portalsWarning {
     display: none;
     margin: auto;
     position: absolute;
@@ -454,27 +525,32 @@ i {
     padding: 2em;
     transform: scale(2.2);
 }
-#portalsWarning h2{
+
+#portalsWarning h2 {
     text-align: center;
 }
-#portalsWarning button{
+
+#portalsWarning button {
     text-align: center;
     margin: auto;
     display: block;
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: .5s;
 }
-#portalsWarning button:hover{
+
+#portalsWarning button:hover {
     animation: none;
     background-color: black;
     color: white;
     transition: .5s;
 }
-#portalsWarning div{
+
+#portalsWarning div {
     text-align: justify;
-   
+
 }
-#twoPortals{
+
+#twoPortals {
     display: none;
     position: absolute;
     top: 100px;
@@ -482,45 +558,57 @@ i {
     margin: auto;
     height: auto;
     width: 100%;
-    
+
 }
-#twoPortals img{
+
+#twoPortals img {
     height: 600px;
     width: 400px;
     transform: scale(0.3);
 }
-#thehell{
+
+#thehell {
     position: relative;
     bottom: -10px;
     left: 200px;
     cursor: pointer;
     transition: 0.5s;
 }
-#theheaven{
+
+#theheaven {
     position: absolute;
     bottom: -10px;
     right: 215px;
     cursor: pointer;
     transition: 0.5s;
 }
-#twoPortals #hell{
+
+#twoPortals #hell {
     position: absolute;
     bottom: 100px;
     left: 365px;
     color: white;
 }
-#twoPortals #heaven{
+
+#twoPortals #heaven {
     position: absolute;
     bottom: 100px;
     right: 365px;
     color: white;
 }
-#musicButton{
+
+#musicButton {
     position: absolute;
     top: 25px;
     left: 250px;
 }
-#music{
+
+#music {
     display: none;
     margin: auto;
+}
+
+#logo {
+    color: blueviolet;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blueviolet, 0 0 0.2em blueviolet;
 }
