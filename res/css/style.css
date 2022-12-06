@@ -15,6 +15,10 @@ html {
 
 body {
     background-color: black;
+    background-image: url(../img/gif.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-left: 5px solid rgba(137, 43, 226, 0.71);
     border-right: 5px solid rgba(137, 43, 226, 0.71);
     border-bottom: none;
@@ -117,7 +121,7 @@ button:hover {
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: 0.5s;
     text-shadow: 1px 1px 1px black;
-    
+   
 }
 
 #portals:hover {
@@ -260,6 +264,31 @@ button:hover {
     cursor: crosshair;
 
 }
+#surtur {
+    width: 500px;
+    height: 358px;
+    position: absolute;
+    top: 200px;
+    right: 250px;
+    display: none;
+    transition: .5s;
+    transform: scaleX(1);
+    cursor: crosshair;
+
+}
+#kingOfHeaven {
+    width: 271px;
+    height: 186px;
+    position: absolute;
+    bottom:  220px;
+    left: 700px;
+    display: none;
+    transition: .5s;
+    transform: scale(2);
+    cursor: crosshair;
+
+}
+
 
 #yourHP {
     position: absolute;
@@ -335,7 +364,7 @@ i {
     text-align: center;
     font-size: 200px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.638);
+    text-shadow: 2px 2px 10px black;
 
 }
 
@@ -486,7 +515,7 @@ i {
 .square {
     height: 200px;
     width: 200px;
-    border: 3px solid blueviolet;
+    border: 3px solid whitesmoke;
     cursor: url(../img/cursor.draezlyr.png), auto;
     transition: 0.5s;
 
@@ -581,6 +610,7 @@ i {
     right: 215px;
     cursor: pointer;
     transition: 0.5s;
+    
 }
 
 #twoPortals #hell {
@@ -601,7 +631,11 @@ i {
     position: absolute;
     top: 25px;
     left: 250px;
+    background-color: #333;
+    color: white;
+    border: 3px solid black;
 }
+
 
 #music {
     display: none;
