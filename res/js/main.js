@@ -760,7 +760,7 @@ portalsWarningContinue.onclick = () => {
     backButtonProblem.style.display = "block";
     heroAttack.style.display = "none";
     heroIdle.style.display = "none";
-    document.body.style.backgroundImage = "none";
+    document.body.style.backgroundImage = "url(./res/img/heavenBackground.jpg)";
     merchantOffers.style.display = "none";
     yourHP.style.display = "none";
     backButtonProblem.style.opacity = "1";
