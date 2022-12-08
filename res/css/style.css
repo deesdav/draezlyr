@@ -6,27 +6,32 @@
     font-weight: 900;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
-   
+
 }
 
 
- body {
+body {
     background-color: black;
+    background-image: url(../img/gif.gif);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-left: 5px solid rgba(137, 43, 226, 0.71);
     border-right: 5px solid rgba(137, 43, 226, 0.71);
     border-bottom: none;
     border-top: none;
     border-radius: 1em;
     color: black;
-    height: auto;
-    overflow: auto;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #container {
     width: 100%;
-    height: 730px;
+    height: 850px;
     display: flex;
     flex-direction: column;
 }
@@ -43,12 +48,13 @@ html{
 
 #aboutdraezlyr {
     height: 600px;
-    width: 480px;
+    width: 500px;
     display: block;
     margin: auto;
     border: 10px solid #333;
     border-radius: 1em;
     background-color: white;
+    
 }
 
 #aboutdraezlyr h2 {
@@ -116,27 +122,59 @@ button:hover {
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: 0.5s;
     text-shadow: 1px 1px 1px black;
+   
 }
-#portals:hover{
+
+#portals:hover {
     color: rgba(255, 255, 255, 0.844);
     transform: scale(1.7);
 }
 
-@keyframes portalsBackground{
-    10%{background-color: #F5F65D;}
-    20%{background-color: #0ED6BD;}
-    30%{background-color: #CEF0F9;}
-    40%{background-color: #0DA5CE;}
-    50%{background-color: #065C72;}
-    60%{background-color: #860111;}
-    70%{background-color: #FF4605;}
-    80%{background-color: #FFD729;}
-    90%{background-color: #FA7900;}
-    100%{background-color: #E71E02}
+@keyframes portalsBackground {
+    10% {
+        background-color: #F5F65D;
+    }
+
+    20% {
+        background-color: #0ED6BD;
+    }
+
+    30% {
+        background-color: #CEF0F9;
+    }
+
+    40% {
+        background-color: #0DA5CE;
+    }
+
+    50% {
+        background-color: #065C72;
+    }
+
+    60% {
+        background-color: #860111;
+    }
+
+    70% {
+        background-color: #FF4605;
+    }
+
+    80% {
+        background-color: #FFD729;
+    }
+
+    90% {
+        background-color: #FA7900;
+    }
+
+    100% {
+        background-color: #E71E02
+    }
 }
 
 #draezlyrImage {
     animation: powerOfDraezlyr 1s infinite alternate linear;
+    
     border-radius: 2em;
 }
 
@@ -159,6 +197,25 @@ button:hover {
 
     ;
 }
+@keyframes powerOfHellDraezlyr {
+    0% {
+        box-shadow: 0px 0px 10px #F11514
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 100px red
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px #F11514
+    }
+
+    ;
+}
 
 #heroIdle,
 #heroRun,
@@ -166,8 +223,8 @@ button:hover {
     height: 500px;
     width: 500px;
     position: absolute;
-    top: 250px;
-    left: 550px;
+    top: 400px;
+    left: 250px;
     border-radius: 200em;
     padding: 0;
     margin: 0;
@@ -175,17 +232,32 @@ button:hover {
     transition: .5s;
     animation: none;
 }
+
 @keyframes rune {
-    0%{box-shadow: 0px 0px 1000px 10px rgb(140, 0, 128) inset;};
-    50%{box-shadow: 0px 0px 1000px 50px rgb(70, 1, 65) inset;};
-    100%{box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;};
+    0% {
+        box-shadow: 0px 0px 1000px 10px rgb(140, 0, 128) inset;
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 1000px 50px rgb(70, 1, 65) inset;
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;
+    }
+
+    ;
 }
 
 #enemy1 {
     width: 144px;
     height: 217px;
     position: absolute;
-    top: 370px;
+    top: 520px;
     right: 550px;
     display: none;
     transition: .5s;
@@ -193,11 +265,36 @@ button:hover {
     cursor: crosshair;
 
 }
+#surtur {
+    width: 500px;
+    height: 358px;
+    position: absolute;
+    top: 350px;
+    right: 250px;
+    display: none;
+    transition: .5s;
+    transform: scaleX(1);
+    cursor: crosshair;
+
+}
+#kingOfHeaven {
+    width: 271px;
+    height: 186px;
+    position: absolute;
+    bottom:  220px;
+    left: 700px;
+    display: none;
+    transition: .5s;
+    transform: scale(2);
+    cursor: crosshair;
+
+}
+
 
 #yourHP {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 15px;
+    bottom: 15px;
     color: blueviolet;
     background-color: white;
     border: 3px solid #333;
@@ -222,8 +319,8 @@ button:hover {
 
 #enemy1HP {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 15px;
+    bottom: 15px;
     color: blueviolet;
     background-color: white;
     border: 3px solid #333;
@@ -256,19 +353,19 @@ i {
     color: white;
     display: none;
     position: absolute;
-    bottom: 50px;
-    left: 120px;
+    bottom: 120px;
+    left: 300px;
 }
 
 #gameover {
     display: none;
-    position: absolute;
-    left: 300px;
-    top: 100px;
+   position: absolute;
+   top: 200px;
+   left: 450px;
     text-align: center;
     font-size: 200px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.638);
+    text-shadow: 2px 2px 10px black;
 
 }
 
@@ -295,13 +392,15 @@ i {
     font-weight: 900;
     transform: scale(1.1);
 }
-#backButtonProblem a{
+
+#backButtonProblem a {
     text-decoration: none;
     color: blueviolet;
     font-weight: bold;
-    transition: 0.5s; 
+    transition: 0.5s;
 }
-#backButtonProblem a:hover{
+
+#backButtonProblem a:hover {
     text-decoration: underline;
     color: black;
 }
@@ -366,29 +465,29 @@ i {
     text-transform: uppercase;
     text-align: center;
     transform: scale(0.9);
-    
+
 }
 
 #round {
     display: none;
-    position: absolute;
-    bottom: 40px;
-    left: 750px;
+   margin: auto;
+    width: 115px;
+    text-align: center;
     background-color: white;
     color: blueviolet;
     padding: 1em;
     border: 3px solid #333;
     text-transform: uppercase;
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 
 #shotRangeContainer {
     display: none;
     margin: auto;
-   position: absolute;
-   top: 0;
-   left: 500px;
-    
+    position: absolute;
+    top: 0;
+    left: 700px;
+
 }
 
 #shotRangeContainer h2 {
@@ -396,7 +495,7 @@ i {
     text-shadow: 0px 1px 10px white;
     padding: 1em;
     margin: auto;
-   font-size: xx-large;
+    font-size: xx-large;
 }
 
 .grid {
@@ -417,13 +516,14 @@ i {
 .square {
     height: 200px;
     width: 200px;
-    border: 3px solid blueviolet;
-   cursor: url(../img/cursor.draezlyr.png), auto;
+    border: 3px solid whitesmoke;
+    cursor: url(../img/cursor.draezlyr.png), auto;
     transition: 0.5s;
-    
+
 }
-.square:hover{
-    
+
+.square:hover {
+
     border: 3px solid gold;
 }
 
@@ -431,50 +531,56 @@ i {
     background-image: url(../img/enemy1.png);
     background-size: cover;
     transition: .5s;
-   
+
 }
 
 .target:hover {
     background-color: gold;
     transform: rotate(5deg);
     opacity: 0.5;
-    
+
 }
-#portalsWarning{
+
+#portalsWarning {
     display: none;
     margin: auto;
     position: absolute;
-    left: 450px;
-    top: 300px;
+    left: 625px;
+    top: 350px;
     width: 700px;
-    height: 200px;
+    height: 210px;
     background-color: white;
     border: 3px solid #333;
     border-radius: 1em;
     padding: 2em;
     transform: scale(2.2);
 }
-#portalsWarning h2{
+
+#portalsWarning h2 {
     text-align: center;
 }
-#portalsWarning button{
+
+#portalsWarning button {
     text-align: center;
     margin: auto;
     display: block;
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: .5s;
 }
-#portalsWarning button:hover{
+
+#portalsWarning button:hover {
     animation: none;
     background-color: black;
     color: white;
     transition: .5s;
 }
-#portalsWarning div{
+
+#portalsWarning div {
     text-align: justify;
-   
+
 }
-#twoPortals{
+
+#twoPortals {
     display: none;
     position: absolute;
     top: 100px;
@@ -482,36 +588,64 @@ i {
     margin: auto;
     height: auto;
     width: 100%;
-    
+
 }
-#twoPortals img{
+
+#twoPortals img {
     height: 600px;
     width: 400px;
-    transform: scale(0.3);
+    
 }
-#thehell{
+
+#thehell {
     position: relative;
-    bottom: -10px;
-    left: 200px;
+    top: 115px;
+    left: 290px;
     cursor: pointer;
     transition: 0.5s;
+    transform: scale(0.4);
 }
-#theheaven{
+
+#theheaven {
     position: absolute;
-    bottom: -10px;
-    right: 215px;
+    top: 115px;
+    right: 315px;
     cursor: pointer;
     transition: 0.5s;
+    transform: scale(0.4);
+    
 }
-#twoPortals #hell{
+
+#twoPortals #hell {
     position: absolute;
-    bottom: 100px;
-    left: 365px;
+    bottom: -20px;
+    left: 455px;
     color: white;
 }
-#twoPortals #heaven{
+
+#twoPortals #heaven {
     position: absolute;
-    bottom: 100px;
-    right: 365px;
+    bottom: -20px;
+    right: 465px;
     color: white;
+}
+
+#musicButton {
+    position: absolute;
+    top: 25px;
+    left: 280px;
+    background-color: #333;
+    color: white;
+    border: 3px solid black;
+}
+
+
+#music {
+    display: none;
+    margin: auto;
+}
+
+#logo {
+    color: blueviolet;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blueviolet, 0 0 0.2em blueviolet;
 }
