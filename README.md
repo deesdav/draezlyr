@@ -1,2 +1,3 @@
 # DRAEZLYR SWORD MASSACRE
-[View](https://deesdav.github.io/draezlyr/)
+[PRES TO PLAY](https://deesdav.github.io/draezlyr/)
+čégo a vem hned do ruky meč draezlyr
