@@ -644,6 +644,8 @@ thehell.onclick = () => {
             document.body.style.backgroundRepeat = "no-repeat";
             draezlyrImage.style.transform = "scale(0.5)";
             draezlyrImage.style.display = "block";
+            heroAttack.style.top = "400px";
+            heroIdle.style.top = "400px";
 
         }
     }, 1000);
@@ -673,7 +675,7 @@ theheaven.onclick = () => {
       
         document.body.style.borderRight = "0px solid transparent";
         document.body.style.borderLeft = "0px solid transparent";
-        document.body.style.backgroundImage = "url(./res/img/heavenBackground.jpg)";
+        document.body.style.backgroundImage = "url(./res/img/heavenBackground.gif)";
         document.body.style.backgroundColor = "white";
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
@@ -735,7 +737,7 @@ theheaven.onclick = () => {
                 kingOfHeaven.style.display = "none";
                 info.style.fontSize = "40px";
                 info.style.display = "block";
-                heroAttack.style.display = "block";
+                heroAttack.style.display = "none";
                 round.style.display = "none";
                 yourXP += 1000;
                 damage += 100;
@@ -750,8 +752,8 @@ theheaven.onclick = () => {
                 heaven.style.right = "300px";
                 heaven.style.position = "absolute";
                 heaven.style.display = "block";
-                heaven.style.color = "black";
-                info.style.color = "black";
+                heaven.style.color = "white";
+               
                 hell.style.display = "none";
                 heaven.innerText = `THE HEAVEN IS COMPLETED`;
                 draezlyrImage.src = `./res/img/`;
@@ -799,6 +801,16 @@ theheaven.onclick = () => {
             aboutdraezlyr.style.height = "550px";
         }
     }
+}
+kingOfHeaven.onmousedown = () => {
+    kingOfHeaven.style.bottom = "385px";
+    kingOfHeaven.style.left = "885px";
+
+}
+kingOfHeaven.onmouseup = () => {
+    kingOfHeaven.style.bottom = "400px";
+    kingOfHeaven.style.left = "870px";
+    
 }
 
 

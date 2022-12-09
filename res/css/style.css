@@ -281,15 +281,14 @@ button:hover {
     width: 271px;
     height: 186px;
     position: absolute;
-    bottom:  220px;
-    left: 700px;
+    bottom:  400px;
+    left: 870px;
     display: none;
     transition: .5s;
-    transform: scale(2);
+    transform: scale(1.7);
     cursor: crosshair;
 
 }
-
 
 #yourHP {
     position: absolute;
