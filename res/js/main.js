@@ -545,6 +545,10 @@ theheaven.onmouseout = () => {
     theheaven.style.transform = "scale(0.4)";
 }
 thehell.onclick = () => {
+    music.src = "https://www.youtube.com/embed/EQmIBHObtCs?autoplay=1&loop=1";
+    musicButton.style.transform = "scale(1.2)";
+    musicButton.style.color = "#333";
+    musicButton.style.backgroundColor = "white";
     yourXP -= 10;
     xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
     aboutdraezlyr.style.display = "none";
@@ -600,6 +604,10 @@ thehell.onclick = () => {
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundRepeat = "no-repeat";
+        music.src = "";
+        musicButton.style.color = "white";
+        musicButton.style.backgroundColor = "#333";
+        musicButton.style.transform = "none";
         }
         if (enemy1HP.innerText <= 0) {
             info.innerText = `information: Surtur has died and you earned + 500 xp`;
@@ -646,6 +654,8 @@ thehell.onclick = () => {
             document.body.style.borderLeft = "5px solid #F11514";
             document.body.style.borderRight = "5px solid #F11514";
 
+            
+
             heroAttack.style.top = "400px";
             heroIdle.style.top = "400px";
             document.body.style.backgroundImage = "url(./res/img/dead.gif)";
@@ -685,6 +695,11 @@ theheaven.onclick = () => {
         aboutdraezlyr.style.display = "none";
         enemyBasicHP += 10;
         mainHeadLine.style.display = "none";
+
+        music.src = "https://www.youtube.com/embed/rPZWNfevhpk?autoplay=1&loop=1";
+    musicButton.style.transform = "scale(1.2)";
+    musicButton.style.color = "#333";
+    musicButton.style.backgroundColor = "white";
       
         document.body.style.borderRight = "0px solid transparent";
         document.body.style.borderLeft = "0px solid transparent";
@@ -737,6 +752,10 @@ theheaven.onclick = () => {
         document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundRepeat = "no-repeat";
+        music.src = "";
+        musicButton.style.color = "white";
+        musicButton.style.backgroundColor = "#333";
+        musicButton.style.transform = "none";
             }
             if (enemy1HP.innerText <= 0) {
                 info.innerText = `information: King of the Heaven has died and you earned + 1000 xp`;
@@ -766,6 +785,8 @@ theheaven.onclick = () => {
                 heaven.style.position = "absolute";
                 heaven.style.display = "block";
                 heaven.style.color = "white";
+
+          
                
                 hell.style.display = "none";
                 heaven.innerText = `THE HEAVEN IS COMPLETED`;
