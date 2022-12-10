@@ -101,9 +101,9 @@ upgradeHealth.onclick = () => {
     yourXP -= xpPrice;
     xpPrice += xpPriceIncrease;
 
-        heroAttack.style.animation = "rune 1s infinite alternate linear";
-        heroIdle.style.animation = "rune 1s infinite alternate linear";
- 
+    heroAttack.style.animation = "rune 1s infinite alternate linear";
+    heroIdle.style.animation = "rune 1s infinite alternate linear";
+
     xp.innerHTML = `your current xp: ${yourXP}`;
     if (basicHP += 10) {
         upgradeHealth.style.display = "none";
@@ -147,11 +147,11 @@ upgradeDamage.onclick = () => {
     damage = damageUP;
     damageUP += 10;
     yourXP -= xpPrice;
-  
-        heroAttack.style.animation = "rune 1s infinite alternate linear";
-        heroIdle.style.animation = "rune 1s infinite alternate linear";
-    
-   
+
+    heroAttack.style.animation = "rune 1s infinite alternate linear";
+    heroIdle.style.animation = "rune 1s infinite alternate linear";
+
+
     xp.innerHTML = `your current xp: ${yourXP}`;
 
     if (damage += 10) {
@@ -195,11 +195,11 @@ upgradeRegeneration.onclick = () => {
     regeneration += 10;
     yourXP -= xpPrice;
     xpPrice += xpPriceIncrease;
-   
-        heroAttack.style.animation = "rune 1s infinite alternate linear";
-        heroIdle.style.animation = "rune 1s infinite alternate linear";
-   
-   
+
+    heroAttack.style.animation = "rune 1s infinite alternate linear";
+    heroIdle.style.animation = "rune 1s infinite alternate linear";
+
+
     xp.innerHTML = `your current xp: ${yourXP}`;
     if (regeneration += 10) {
         upgradeRegeneration.style.display = "none";
@@ -400,10 +400,10 @@ equip.onclick = () => {
             round.style.display = "none";
             backButton.style.display = "block";
             document.body.style.backgroundImage = "url(./res/img/dead.gif)";
-        document.body.style.backgroundColor = "black";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundColor = "black";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
         }
         if (enemy1HP.innerText <= 0) {
             info.innerText = `information: The Impegnir has died and you earned + 10 xp`;
@@ -600,14 +600,14 @@ thehell.onclick = () => {
             round.style.display = "none";
             backButton.style.display = "block";
             document.body.style.backgroundImage = "url(./res/img/dead.gif)";
-        document.body.style.backgroundColor = "black";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundRepeat = "no-repeat";
-        music.src = "";
-        musicButton.style.color = "white";
-        musicButton.style.backgroundColor = "#333";
-        musicButton.style.transform = "none";
+            document.body.style.backgroundColor = "black";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
+            music.src = "";
+            musicButton.style.color = "white";
+            musicButton.style.backgroundColor = "#333";
+            musicButton.style.transform = "none";
         }
         if (enemy1HP.innerText <= 0) {
             info.innerText = `information: Surtur has died and you earned + 500 xp`;
@@ -654,7 +654,7 @@ thehell.onclick = () => {
             document.body.style.borderLeft = "5px solid #F11514";
             document.body.style.borderRight = "5px solid #F11514";
 
-            
+
 
             heroAttack.style.top = "400px";
             heroIdle.style.top = "400px";
@@ -668,8 +668,8 @@ thehell.onclick = () => {
             heroAttack.style.top = "400px";
             heroIdle.style.top = "400px";
 
-     heroAttack.style.animation = "hellRune 1s infinite alternate linear";
-    heroIdle.style.animation = "hellRune 1s infinite alternate linear";
+            heroAttack.style.animation = "hellRune 1s infinite alternate linear";
+            heroIdle.style.animation = "hellRune 1s infinite alternate linear";
         }
     }, 1000);
     if (yourXP >= 30) {
@@ -697,10 +697,10 @@ theheaven.onclick = () => {
         mainHeadLine.style.display = "none";
 
         music.src = "https://www.youtube.com/embed/rPZWNfevhpk?autoplay=1&loop=1";
-    musicButton.style.transform = "scale(1.2)";
-    musicButton.style.color = "#333";
-    musicButton.style.backgroundColor = "white";
-      
+        musicButton.style.transform = "scale(1.2)";
+        musicButton.style.color = "#333";
+        musicButton.style.backgroundColor = "white";
+
         document.body.style.borderRight = "0px solid transparent";
         document.body.style.borderLeft = "0px solid transparent";
         document.body.style.backgroundImage = "url(./res/img/heavenBackground.gif)";
@@ -748,14 +748,14 @@ theheaven.onclick = () => {
                 round.style.display = "none";
                 backButton.style.display = "block";
                 document.body.style.backgroundImage = "url(./res/img/dead.gif)";
-        document.body.style.backgroundColor = "black";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundRepeat = "no-repeat";
-        music.src = "";
-        musicButton.style.color = "white";
-        musicButton.style.backgroundColor = "#333";
-        musicButton.style.transform = "none";
+                document.body.style.backgroundColor = "black";
+                document.body.style.backgroundPosition = "center";
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundRepeat = "no-repeat";
+                music.src = "";
+                musicButton.style.color = "white";
+                musicButton.style.backgroundColor = "#333";
+                musicButton.style.transform = "none";
             }
             if (enemy1HP.innerText <= 0) {
                 info.innerText = `information: King of the Heaven has died and you earned + 1000 xp`;
@@ -786,8 +786,8 @@ theheaven.onclick = () => {
                 heaven.style.display = "block";
                 heaven.style.color = "white";
 
-          
-               
+
+
                 hell.style.display = "none";
                 heaven.innerText = `THE HEAVEN IS COMPLETED`;
                 draezlyrImage.src = `./res/img/heaven.draezlyr.png`;
@@ -986,5 +986,5 @@ movetarget();
 
 
 
- 
+
 

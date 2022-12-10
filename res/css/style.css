@@ -54,7 +54,7 @@ body {
     border: 10px solid #333;
     border-radius: 1em;
     background-color: white;
-    
+
 }
 
 #aboutdraezlyr h2 {
@@ -122,7 +122,7 @@ button:hover {
     animation: portalsBackground 5s alternate-reverse linear infinite;
     transition: 0.5s;
     text-shadow: 1px 1px 1px black;
-   
+
 }
 
 #portals:hover {
@@ -174,7 +174,7 @@ button:hover {
 
 #draezlyrImage {
     animation: powerOfDraezlyr 1s infinite alternate linear;
-    
+
     border-radius: 2em;
 }
 
@@ -197,6 +197,7 @@ button:hover {
 
     ;
 }
+
 @keyframes powerOfHellDraezlyr {
     0% {
         box-shadow: 0px 0px 10px #F11514
@@ -216,6 +217,7 @@ button:hover {
 
     ;
 }
+
 @keyframes powerOfHeavenDraezlyr {
     0% {
         box-shadow: 0px 0px 10px #bdb643
@@ -271,6 +273,7 @@ button:hover {
 
     ;
 }
+
 @keyframes hellRune {
     0% {
         box-shadow: 0px 0px 1000px 10px #F11514 inset;
@@ -290,6 +293,7 @@ button:hover {
 
     ;
 }
+
 @keyframes heavenRune {
     0% {
         box-shadow: 0px 0px 1000px 10px #bdb643 inset;
@@ -322,6 +326,7 @@ button:hover {
     cursor: crosshair;
 
 }
+
 #surtur {
     width: 500px;
     height: 358px;
@@ -334,11 +339,12 @@ button:hover {
     cursor: crosshair;
 
 }
+
 #kingOfHeaven {
     width: 271px;
     height: 186px;
     position: absolute;
-    bottom:  400px;
+    bottom: 400px;
     left: 870px;
     display: none;
     transition: .5s;
@@ -415,9 +421,9 @@ i {
 
 #gameover {
     display: none;
-   position: absolute;
-   top: 200px;
-   left: 450px;
+    position: absolute;
+    top: 200px;
+    left: 450px;
     text-align: center;
     font-size: 200px;
     color: white;
@@ -526,7 +532,7 @@ i {
 
 #round {
     display: none;
-   margin: auto;
+    margin: auto;
     width: 115px;
     text-align: center;
     background-color: white;
@@ -650,7 +656,7 @@ i {
 #twoPortals img {
     height: 600px;
     width: 400px;
-    
+
 }
 
 #thehell {
@@ -669,7 +675,7 @@ i {
     cursor: pointer;
     transition: 0.5s;
     transform: scale(0.4);
-    
+
 }
 
 #twoPortals #hell {
