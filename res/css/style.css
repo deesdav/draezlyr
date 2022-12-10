@@ -216,6 +216,25 @@ button:hover {
 
     ;
 }
+@keyframes powerOfHeavenDraezlyr {
+    0% {
+        box-shadow: 0px 0px 10px #bdb643
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 100px skyblue
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px #bdb643
+    }
+
+    ;
+}
 
 #heroIdle,
 #heroRun,
@@ -248,6 +267,44 @@ button:hover {
 
     100% {
         box-shadow: 0px 0px 1000px 100px rgb(255, 5, 234) inset;
+    }
+
+    ;
+}
+@keyframes hellRune {
+    0% {
+        box-shadow: 0px 0px 1000px 10px #F11514 inset;
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 1000px 50px red inset;
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px 100px #F11514 inset;
+    }
+
+    ;
+}
+@keyframes heavenRune {
+    0% {
+        box-shadow: 0px 0px 1000px 10px #bdb643 inset;
+    }
+
+    ;
+
+    50% {
+        box-shadow: 0px 0px 1000px 50px skyblue inset;
+    }
+
+    ;
+
+    100% {
+        box-shadow: 0px 0px 1000px 100px #bdb643 inset;
     }
 
     ;

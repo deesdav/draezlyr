@@ -100,8 +100,10 @@ upgradeHealth.onclick = () => {
     basicHP += 0;
     yourXP -= xpPrice;
     xpPrice += xpPriceIncrease;
-    heroAttack.style.animation = "rune 1s infinite alternate linear";
-    heroIdle.style.animation = "rune 1s infinite alternate linear";
+
+        heroAttack.style.animation = "rune 1s infinite alternate linear";
+        heroIdle.style.animation = "rune 1s infinite alternate linear";
+ 
     xp.innerHTML = `your current xp: ${yourXP}`;
     if (basicHP += 10) {
         upgradeHealth.style.display = "none";
@@ -145,8 +147,11 @@ upgradeDamage.onclick = () => {
     damage = damageUP;
     damageUP += 10;
     yourXP -= xpPrice;
-    heroAttack.style.animation = "rune 1s infinite alternate linear";
-    heroIdle.style.animation = "rune 1s infinite alternate linear";
+  
+        heroAttack.style.animation = "rune 1s infinite alternate linear";
+        heroIdle.style.animation = "rune 1s infinite alternate linear";
+    
+   
     xp.innerHTML = `your current xp: ${yourXP}`;
 
     if (damage += 10) {
@@ -190,8 +195,11 @@ upgradeRegeneration.onclick = () => {
     regeneration += 10;
     yourXP -= xpPrice;
     xpPrice += xpPriceIncrease;
-    heroAttack.style.animation = "rune 1s infinite alternate linear";
-    heroIdle.style.animation = "rune 1s infinite alternate linear";
+   
+        heroAttack.style.animation = "rune 1s infinite alternate linear";
+        heroIdle.style.animation = "rune 1s infinite alternate linear";
+   
+   
     xp.innerHTML = `your current xp: ${yourXP}`;
     if (regeneration += 10) {
         upgradeRegeneration.style.display = "none";
@@ -306,7 +314,8 @@ surtur.onmouseup = () => {
     surtur.style.right = "275px";
 }
 kingOfHeaven.onmousedown = () => {
-
+    kingOfHeaven.style.bottom = "385px";
+    kingOfHeaven.style.left = "885px";
     if (enemy1HP.innerText <= 0) {
         info.innerText = `information: the enemy has been defeated and you earned + 10 xp`;
         clearInterval(myInterval);
@@ -342,6 +351,8 @@ kingOfHeaven.onmouseup = () => {
     heroIdle.style.left = "250px";
     heroIdle.style.display = "none";
     heroAttack.style.display = "none";
+    kingOfHeaven.style.bottom = "400px";
+    kingOfHeaven.style.left = "870px";
 
 }
 
@@ -647,6 +658,8 @@ thehell.onclick = () => {
             heroAttack.style.top = "400px";
             heroIdle.style.top = "400px";
 
+     heroAttack.style.animation = "hellRune 1s infinite alternate linear";
+    heroIdle.style.animation = "hellRune 1s infinite alternate linear";
         }
     }, 1000);
     if (yourXP >= 30) {
@@ -666,7 +679,7 @@ thehell.onclick = () => {
 }
 
 theheaven.onclick = () => {
-    if (yourXP >= 100) {
+    if (yourXP >= 150) {
         yourXP -= 10;
         xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
         aboutdraezlyr.style.display = "none";
@@ -744,8 +757,8 @@ theheaven.onclick = () => {
                 basicHP += 100;
                 xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
                 backButton.style.display = "block";
-                heroAttack.src = "./res/img/";
-                heroIdle.src = "./res/img/";
+                heroAttack.src = "./res/img/heaven.hero.attack.png";
+                heroIdle.src = "./res/img/heaven.hero.idle.png";
                 thehell.style.left = "-1000px";
                 theheaven.style.right = "-2000px";
                 heaven.style.transform = "scale(1.5)";
@@ -756,8 +769,8 @@ theheaven.onclick = () => {
                
                 hell.style.display = "none";
                 heaven.innerText = `THE HEAVEN IS COMPLETED`;
-                draezlyrImage.src = `./res/img/`;
-                draezlyrImage.style.animation = "powerOfDraezlyr 1s infinite alternate linear";
+                draezlyrImage.src = `./res/img/heaven.draezlyr.png`;
+                draezlyrImage.style.animation = "powerOfHeavenDraezlyr 1s infinite alternate linear";
                 equip.style.backgroundColor = "#bdb643";
                 yourHP.style.color = "#bdb643";
                 enemy1HP.style.color = "#bdb643";
@@ -783,6 +796,8 @@ theheaven.onclick = () => {
 
                 draezlyrImage.style.transform = "scale(0.5)";
                 draezlyrImage.style.display = "block";
+                heroAttack.style.animation = "heavenRune 1s infinite alternate linear";
+                heroIdle.style.animation = "heavenRune 1s infinite alternate linear";
 
             }
         }, 1000);
@@ -802,16 +817,8 @@ theheaven.onclick = () => {
         }
     }
 }
-kingOfHeaven.onmousedown = () => {
-    kingOfHeaven.style.bottom = "385px";
-    kingOfHeaven.style.left = "885px";
 
-}
-kingOfHeaven.onmouseup = () => {
-    kingOfHeaven.style.bottom = "400px";
-    kingOfHeaven.style.left = "870px";
-    
-}
+
 
 
 
