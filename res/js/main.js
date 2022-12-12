@@ -39,9 +39,10 @@ const xp = document.getElementById("xp");
 
 const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
+const aboutYouContainer = document.getElementById("aboutYouContainer");
 
-//                         0   1   2
-const backgroundImages = ["", "", ""];
+const coral = document.getElementById("coral");
+
 
 
 
@@ -535,8 +536,8 @@ aboutYou.onclick = () => {
     draezlyrImage.style.display = "none";
     document.body.style.borderRight = "0px solid transparent";
     document.body.style.borderLeft = "0px solid transparent";
-    
-    document.body.style.backgroundImage = "url()";
+    aboutYouContainer.style.display = "block";
+    document.body.style.backgroundImage = "url(./res/img/medi.gif)";
     document.body.style.backgroundColor = "white";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -550,21 +551,7 @@ aboutYou.onclick = () => {
     info.style.display = "none";
     clearInterval(myInterval);
 
-    const random = Math.floor(Math.random() * 50);
-    if (random >= 0 && random <= 24){
-        document.body.style.backgroundImage = "url(./res/img/one.gif)";
-        document.body.style.backgroundColor = "white";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundRepeat = "no-repeat";
-       
-    }
-    if(random >= 25 && random <= 50) {
-        document.body.style.backgroundImage = "url(./res/img/two.gif)";
-        document.body.style.backgroundColor = "white";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundRepeat = "no-repeat";
-   
-    }
+
 }
 
 portals.onclick = () => {
@@ -966,6 +953,8 @@ portalsWarningContinue.onclick = () => {
 }
 
 backButton.onclick = () => {
+    document.body.style.animation = "none";
+    aboutYouContainer.style.display = "none";
     equip.style.display = "block";
     twoPortals.style.display = "none";
     portalsWarning.style.display = "none";
@@ -1008,6 +997,26 @@ backButton.onclick = () => {
     } else {
         shottingRange.style.display = "none";
     }
+    document.body.style.backgroundAttachment = "none";
+    document.body.style.backgroundPosition = "bottom";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.height = "100vh";
+
+}
+coral.onclick = () => {
+    backButton.style.display = "block";
+    aboutYouContainer.style.display = "none";
+ 
+    musicButton.style.display = "block";
+    document.body.style.backgroundImage = "url(./res/img/coralos.png)";
+    document.body.style.backgroundAttachment = "fixed";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "repeat";
+    document.body.style.backgroundColor = "hotpink";
+    music.src = "https://www.youtube.com/embed/zqLEO5tIuYs?autoplay=1&loop=1";
+    
 
 }
 

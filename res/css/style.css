@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 * {
     user-select: none;
     font-family: 'MedievalSharp', cursive;
@@ -27,6 +36,55 @@ body {
     color: black;
     height: 100vh;
     overflow: hidden;
+}
+#aboutYouContainer{
+ display: none;
+ position: absolute;
+ top: 200px;
+ left: 100px;
+ height: 600px;
+ width: 1800px;
+ background-color: rgba(39, 39, 39, 0.858);
+ margin: auto;
+ border: 10px solid rgb(32, 11, 11);
+ border-radius: 5em;
+ box-shadow: 0 0 500px rgb(0, 0, 0);
+ 
+}
+#coral{
+    color: rgb(255, 0, 234);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#aboutYouContainer h3{
+    color: white;
+    text-align: center;
+    font-size: xxx-large;
+    text-transform: uppercase;
+    text-shadow: 0 0 300px #000;
+}
+#aboutYouContainer div{
+    color: white;
+    width: 80%;
+    font-size: xx-large;
+    padding: 1em;
+    text-shadow: 0 0 30px #000;
+}
+#aboutYouContainer img{
+    position: absolute;
+    right: 5px;
+    top: 100px;
+    transform: scale(2);
+}
+#aboutYouContainer .hraezlyr{
+    width: 640px;
+    height: 360px;
+    position: absolute;
+    top: 300px;
+    right: -100px;
+    transform: scale(.5);
+
 }
 
 #container {
@@ -110,6 +168,15 @@ button:hover {
     right: 300px;
     top: 150px;
     transform: scale(1.5);
+
+}
+#shotRangeContainer i{
+    font-size: 20px;
+    color: red; 
+    padding: 1em;
+    position: absolute;
+    top: 49px;
+    right: 20px;
 
 }
 #aboutYou{
@@ -430,7 +497,7 @@ i {
     display: none;
     position: absolute;
     top: 200px;
-    left: 450px;
+    left: 500px;
     text-align: center;
     font-size: 200px;
     color: white;
@@ -476,15 +543,15 @@ i {
 
 #merchantOffers {
     height: 150px;
-    width: 820px;
+    width: 850px;
     display: none;
     margin: auto;
     border: 10px solid #333;
     border-radius: 1em;
     background-color: white;
     position: absolute;
-    top: 650px;
-    left: 560px;
+    top: 680px;
+    left: 600px;
 padding: 1em;
     gap: 10px;
     justify-content: center;
@@ -614,7 +681,7 @@ padding: 1em;
     display: none;
     margin: auto;
     position: absolute;
-    left: 625px;
+    left: 680px;
     top: 350px;
     width: 700px;
     height: 210px;
