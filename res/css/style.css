@@ -112,6 +112,13 @@ button:hover {
     transform: scale(1.5);
 
 }
+#aboutYou{
+    position: absolute;
+    right: 300px;
+    bottom: 150px;
+    transform: scale(1.5);
+    
+}
 
 #portals {
     position: absolute;
@@ -315,8 +322,8 @@ button:hover {
 }
 
 #enemy1 {
-    width: 144px;
-    height: 217px;
+    width: auto;
+    height: auto;
     position: absolute;
     top: 520px;
     right: 550px;
@@ -476,9 +483,9 @@ i {
     border-radius: 1em;
     background-color: white;
     position: absolute;
-    top: 500px;
-    left: 400px;
-
+    top: 650px;
+    left: 560px;
+padding: 1em;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -498,7 +505,7 @@ i {
 
 #merchantOffers div {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
 }
 
 .upgrade1 {

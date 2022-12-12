@@ -18,6 +18,7 @@ const merchant = document.getElementById("merchant");
 const shottingRange = document.getElementById("shotRange");
 const shotRangeContainer = document.getElementById("shotRangeContainer");
 const portals = document.getElementById("portals");
+const aboutYou = document.getElementById("aboutYou");
 const portalsWarning = document.getElementById("portalsWarning");
 const portalsWarningContinue = document.getElementById("portalsWarningContinue");
 const twoPortals = document.getElementById("twoPortals");
@@ -38,6 +39,11 @@ const xp = document.getElementById("xp");
 
 const music = document.getElementById("music");
 const musicButton = document.getElementById("musicButton");
+
+//                         0   1   2
+const backgroundImages = ["", "", ""];
+
+
 
 musicButton.onclick = () => {
     music.src = "https://www.youtube.com/embed/_k98FiylD2M?autoplay=1&loop=1";
@@ -417,14 +423,29 @@ equip.onclick = () => {
             info.style.display = "block";
             heroAttack.style.display = "none";
             round.style.display = "none";
-            yourXP += 10;
-            xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
+
+            
             backButton.style.display = "block";
             document.body.style.backgroundImage = "url(./res/img/dead.gif)";
             document.body.style.backgroundColor = "black";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundSize = "cover";
             document.body.style.backgroundRepeat = "no-repeat";
+
+            if (random >= 0 && random <= 49){
+                enemy1.src = "./res/img/enemy1.png";
+                info.innerText = `information: The Impegnir has died and you earned + 10 xp`;
+                yourXP += 10;
+                xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
+               
+            }
+            if(random >= 50 && random <= 100) {
+                enemy1.src = "./res/img/monster.png";
+                info.innerText = `information: The Demongnir has died and you earned + 20 xp`;
+                yourXP += 20;
+                xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
+           
+            }
         }
     }, 1000);
     if (yourXP >= 30) {
@@ -441,6 +462,24 @@ equip.onclick = () => {
         equip.style.marginTop += "30px";
         aboutdraezlyr.style.height = "550px";
     }
+//random try
+const random = Math.floor(Math.random() * 100);
+
+if (random >= 0 && random <= 49){
+    enemy1.src = "./res/img/enemy1.png";
+    info.innerText = `information: The Impegnir has died and you earned + 10 xp`;
+   
+}
+if(random >= 50 && random <= 100) {
+    enemy1.src = "./res/img/monster.png";
+    yourHP.innerText -= damageFromEnemy;
+    damageFromEnemy = 5;
+    info.innerText = `information: The Demongnir has died and you earned + 20 xp`;
+  
+    
+}
+
+
 
 }
 merchant.onclick = () => {
@@ -487,6 +526,47 @@ shottingRange.onclick = () => {
     enemy1.style.display = "none";
     info.style.display = "none";
 }
+aboutYou.onclick = () => {
+    aboutdraezlyr.style.display = "none";
+    backButton.style.display = "block";
+    backButtonProblem.style.display = "none";
+    merchantOffers.style.display = "none"
+    mainHeadLine.style.display = "none";
+    draezlyrImage.style.display = "none";
+    document.body.style.borderRight = "0px solid transparent";
+    document.body.style.borderLeft = "0px solid transparent";
+    
+    document.body.style.backgroundImage = "url()";
+    document.body.style.backgroundColor = "white";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    heroIdle.style.display = "none";
+    heroAttack.style.display = "none";
+    yourHP.style.display = "none";
+    enemy1HP.style.display = "none";
+    backButtonProblem.style.opacity = "0";
+    
+    enemy1.style.display = "none";
+    info.style.display = "none";
+    clearInterval(myInterval);
+
+    const random = Math.floor(Math.random() * 50);
+    if (random >= 0 && random <= 24){
+        document.body.style.backgroundImage = "url(./res/img/one.gif)";
+        document.body.style.backgroundColor = "white";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+       
+    }
+    if(random >= 25 && random <= 50) {
+        document.body.style.backgroundImage = "url(./res/img/two.gif)";
+        document.body.style.backgroundColor = "white";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+   
+    }
+}
+
 portals.onclick = () => {
     theheaven.style.display = "block";
     heaven.style.display = "block";
@@ -653,6 +733,9 @@ thehell.onclick = () => {
             backButtonProblem.style.border = "5px solid #F11514";
             document.body.style.borderLeft = "5px solid #F11514";
             document.body.style.borderRight = "5px solid #F11514";
+            upgradeHealth.style.backgroundColor = "#F11514";
+            upgradeDamage.style.backgroundColor = "#F11514";
+            upgradeRegeneration.style.backgroundColor = "#F11514";
 
 
 
@@ -803,6 +886,11 @@ theheaven.onclick = () => {
                 backButtonProblem.style.border = "5px solid #bdb643";
                 document.body.style.borderLeft = "5px solid #bdb643";
                 document.body.style.borderRight = "5px solid #bdb643";
+
+                upgradeHealth.style.backgroundColor = "#bdb643";
+                upgradeDamage.style.backgroundColor = "#bdb643";
+                upgradeRegeneration.style.backgroundColor = "#bdb643";
+
                 logo.style.textShadow = "1px 1px 2px rgb(255, 255, 255), 0 0 1em #bdb643, 0 0 0.2em #bdb643";
                 musicButton.style.backgroundColor = "#bdb643";
                 twoPortals.style.display = "none";
@@ -862,9 +950,9 @@ portalsWarningContinue.onclick = () => {
     gameover.style.display = "none";
     info.style.display = "none";
     enemy1HP.innerText = enemyBasicHP;
-    upgradeHealth.style.display = "block";
-    upgradeDamage.style.display = "block";
-    upgradeRegeneration.style.display = "block";
+        upgradeHealth.style.display = "block";
+        upgradeDamage.style.display = "block";
+        upgradeRegeneration.style.display = "block";
     yourHP.innerText = basicHP;
     round.style.display = "none";
     enemy1HP.style.display = "none";
@@ -965,7 +1053,7 @@ function randomSquare() {
 }
 
 squares.forEach(square => {
-    square.addEventListener("mouseover", (k) => {
+    square.addEventListener("click", (k) => {
         console.log(k);
 
         if (square.id == hitPosition) {
