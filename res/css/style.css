@@ -53,7 +53,7 @@ body {
 }
 #coral{
     color: rgb(255, 0, 234);
-    cursor: pointer;
+    cursor: help;
     transition: .5s;
 }
 
