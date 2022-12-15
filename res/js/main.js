@@ -579,7 +579,7 @@ portals.onclick = () => {
     portalsWarningContinue.style.display = "block";
 
 
-    if (yourXP <= 5) {
+    if (yourXP <= 500) {
         portalsWarning.style.display = "block";
         twoPortals.style.display = "none";
     } else {
@@ -675,6 +675,8 @@ thehell.onclick = () => {
             musicButton.style.color = "white";
             musicButton.style.backgroundColor = "#333";
             musicButton.style.transform = "none";
+            heroAttack.style.top = "400px";
+            heroIdle.style.top = "400px";
         }
         if (enemy1HP.innerText <= 0) {
             info.innerText = `information: Surtur has died and you earned + 500 xp`;
@@ -735,8 +737,7 @@ thehell.onclick = () => {
             document.body.style.backgroundRepeat = "no-repeat";
             draezlyrImage.style.transform = "scale(0.5)";
             draezlyrImage.style.display = "block";
-            heroAttack.style.top = "400px";
-            heroIdle.style.top = "400px";
+           
 
             heroAttack.style.animation = "hellRune 1s infinite alternate linear";
             heroIdle.style.animation = "hellRune 1s infinite alternate linear";
@@ -1004,6 +1005,7 @@ backButton.onclick = () => {
     document.body.style.height = "100vh";
 
 }
+
 coral.onclick = () => {
     backButton.style.display = "block";
     aboutYouContainer.style.display = "none";
@@ -1017,7 +1019,7 @@ coral.onclick = () => {
     document.body.style.backgroundColor = "hotpink";
     music.src = "https://www.youtube.com/embed/zqLEO5tIuYs?autoplay=1&loop=1";
     
-
+ 
 }
 
 window.addEventListener("keyup", (e) => {
