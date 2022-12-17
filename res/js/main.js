@@ -43,7 +43,112 @@ const aboutYouContainer = document.getElementById("aboutYouContainer");
 
 const coral = document.getElementById("coral");
 
+const idk = document.getElementById("idk");
+const textForIDK = document.getElementById("textForIDK");
+const paragraph = document.getElementById("paragraph");
 
+
+const all = setInterval( () => {
+    document.body.style.opacity = "1";
+},300);
+
+
+idk.onclick = () => {
+    music.src = "https://www.youtube.com/embed/_qWB60haIkM?autoplay=1&loop=1";
+    document.body.style.backgroundImage = "url(./res/img/multi.gif)"; 
+    aboutdraezlyr.style.display = "none";
+    merchantOffers.style.display = "none"
+    mainHeadLine.style.display = "none";
+    draezlyrImage.style.display = "none";
+    document.body.style.borderRight = "0px solid transparent";
+    document.body.style.borderLeft = "0px solid transparent";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundColor = "black";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    heroIdle.style.display = "none";
+    heroAttack.style.display = "none";
+    yourHP.style.display = "none";
+    enemy1HP.style.display = "none";
+    backButtonProblem.style.opacity = "0";
+    backButton.style.display = "block";
+    enemy1.style.display = "none";
+    info.style.display = "none";
+    textForIDK.style.display = "flex";
+    
+}
+const quotes = setInterval(() => {
+    
+    const randomQuotes = Math.floor(Math.random() * 219);
+    if(randomQuotes > 0 && randomQuotes < 9){
+        paragraph.innerText = `Scorpion : "Get over here!"`;
+    }
+    if(randomQuotes > 10 && randomQuotes < 19){
+        paragraph.innerText = `Various : "Would You Kindly…"`;
+    }
+    if(randomQuotes > 20 && randomQuotes < 29){
+        paragraph.innerText = `Roman Bellic : "Niko, It’s Roman! Let’s Go Bowling!"`;
+    }
+    if(randomQuotes > 30 && randomQuotes < 39){
+        paragraph.innerText = `Various : "Snake? SNAAAAAAAKE!!!"`;
+    }
+    if(randomQuotes > 40 && randomQuotes < 49){
+        paragraph.innerText = `Ezio Auditore : "Requiescat In Pace"`;
+    }
+    if(randomQuotes > 50 && randomQuotes < 59){
+        paragraph.innerText = `Various Guards : "I Used To Be An Adventurer Like You. Then I Took An Arrow To The Knee."`;
+    }
+    if(randomQuotes > 60 && randomQuotes < 69){
+        paragraph.innerText = `Barry Burton : "You Were Almost A Jill Sandwich!"`;
+    }
+    if(randomQuotes > 70 && randomQuotes < 79){
+        paragraph.innerText = `Vaas : "Did I Ever Tell You The Definition Of Insanity?"`;
+    }
+    if(randomQuotes > 80 && randomQuotes < 89){
+        paragraph.innerText = `Narrator : "War… War Never Changes"`;
+    }
+    if(randomQuotes > 90 && randomQuotes < 99){
+        paragraph.innerText = `Snake : "Kept You Waiting, Huh?"`;
+    }
+    if(randomQuotes > 100 && randomQuotes < 109){
+        paragraph.innerText = `Toad : "Thank You Mario! But Our Princess Is In Another Castle!"`;
+    }
+    if(randomQuotes > 110 && randomQuotes < 119){
+        paragraph.innerText = `Big Smoke : "All We Had To Do, Was Follow The Damn Train, CJ!"`;
+    }
+    if(randomQuotes > 120 && randomQuotes < 129){
+        paragraph.innerText = `Dark Souls : "You Died"`;
+    }
+    if(randomQuotes > 130 && randomQuotes < 139){
+        paragraph.innerText = `G-Man : "The Right Man In The Wrong Place Can Make All The Difference In The World. So Wake Up Mr. Freeman, Wake Up And Smell The Ashes."`;
+    } 
+    if(randomQuotes > 140 && randomQuotes < 149){
+        paragraph.innerText = `Joshua Graham : "I Survived Because The Fire Inside Me Burned Brighter Than The Fire Around Me."`;
+    } 
+    if(randomQuotes > 150 && randomQuotes < 159){
+        paragraph.innerText = `Navi : "Hey! Listen!"`;
+    }
+    if(randomQuotes > 160 && randomQuotes < 169){
+        paragraph.innerText = `Sora : "I Don't Need A Weapon; My Friends Are My Power!"`;
+    }
+    if(randomQuotes > 170 && randomQuotes < 179){
+        paragraph.innerText = `Conrad Roth : "No, You Know About Loss. Sacrifice Is A Choice You Make. Loss Is A Choice Made For You."`;
+    }
+    if(randomQuotes > 180 && randomQuotes < 189){
+        paragraph.innerText = `Javik : "Stand Amongst The Ashes Of A Trillion Dead Souls And Ask The Ghosts If Honor Matters. The Silence Is Your Answer."`;
+    }
+    if(randomQuotes > 190 && randomQuotes < 199){
+        paragraph.innerText = `Announcer : "Finish Him!"`;
+    }
+    if(randomQuotes > 200 && randomQuotes < 209){
+        paragraph.innerText = `Old Man : "It's Dangerous To Go Alone! Take This."`;
+    }
+    if(randomQuotes > 210 && randomQuotes < 219){
+        paragraph.innerText = `Master Chief : "Sir. Finishing This Fight"`;
+    }
+
+    
+},2000);
 
 
 musicButton.onclick = () => {
@@ -101,6 +206,7 @@ if (yourXP >= 60) {
 
 window.onload = () => {
     clearInterval(myInterval);
+    all();
 }
 
 upgradeHealth.onclick = () => {
@@ -955,6 +1061,7 @@ portalsWarningContinue.onclick = () => {
 
 backButton.onclick = () => {
     document.body.style.animation = "none";
+    textForIDK.style.display = "none";
     aboutYouContainer.style.display = "none";
     equip.style.display = "block";
     twoPortals.style.display = "none";
