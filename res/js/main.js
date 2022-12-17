@@ -1,3 +1,4 @@
+const time = document.getElementById("time");
 const equip = document.getElementById("equip");
 const mainHeadLine = document.getElementById("mainHeadLine");
 const draezlyrImage = document.getElementById("draezlyrImage");
@@ -1134,3 +1135,12 @@ function movetarget() {
 }
 
 movetarget();
+
+
+const timer = time.onclick = () => {
+  document.getElementById("time").innerHTML = Date();
+  
+}
+setInterval(() => {
+  timer();
+}, 1000);

@@ -874,3 +874,16 @@ i {
     color: blueviolet;
     text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em blueviolet, 0 0 0.2em blueviolet;
 }
+
+#time {
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+  background-color: transparent;
+  border: none;
+}
+#time:hover{
+    cursor: default;
+    box-shadow: 0 0 0px white;
+    color: white;
+}
