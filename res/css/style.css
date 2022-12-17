@@ -1,25 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-@media screen and (max-width: 758px){
-    *{
+@media screen and (max-width: 758px) {
+    * {
         font-size: small;
     }
-    body{
+
+    body {
         width: 100%;
         height: auto;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-       opacity: 0;
-       background-color: #000;
+        opacity: 0;
+        background-color: #000;
     }
-    button{
+
+    button {
         display: none;
     }
-    #backButtonProblem{
+
+    #backButtonProblem {
         opacity: 0;
     }
-    
-    
+
+
 }
 
 
@@ -52,34 +55,37 @@ body {
     overflow: hidden;
     opacity: 0;
 }
-#aboutYouContainer{
- display: none;
- position: absolute;
- top: 200px;
- left: 100px;
- height: 600px;
- width: 1800px;
- background-color: rgba(39, 39, 39, 0.858);
- margin: auto;
- border: 10px solid rgb(32, 11, 11);
- border-radius: 5em;
- box-shadow: 0 0 500px rgb(0, 0, 0);
- 
+
+#aboutYouContainer {
+    display: none;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 600px;
+    width: 1800px;
+    background-color: rgba(39, 39, 39, 0.858);
+    margin: auto;
+    border: 10px solid rgb(32, 11, 11);
+    border-radius: 5em;
+    box-shadow: 0 0 500px rgb(0, 0, 0);
+
 }
-#coral{
+
+#coral {
     color: rgb(255, 0, 234);
     cursor: help;
     transition: .5s;
 }
 
-#aboutYouContainer h3{
+#aboutYouContainer h3 {
     color: white;
     text-align: center;
     font-size: xxx-large;
     text-transform: uppercase;
     text-shadow: 0 0 300px #000;
 }
-#aboutYouContainer div{
+
+#aboutYouContainer div {
     color: white;
     width: 80%;
     font-size: xx-large;
@@ -87,13 +93,15 @@ body {
     text-shadow: 0 0 30px #000;
     margin-left: 22px;
 }
-#aboutYouContainer img{
+
+#aboutYouContainer img {
     position: absolute;
     right: 5px;
     top: 100px;
     transform: scale(2);
 }
-#aboutYouContainer .hraezlyr{
+
+#aboutYouContainer .hraezlyr {
     width: 640px;
     height: 360px;
     position: absolute;
@@ -156,7 +164,7 @@ button {
     font-weight: 900;
     cursor: pointer;
     border-radius: 1em;
- 
+
     text-transform: uppercase;
     box-shadow: 0 0 0px white;
     transition: 0.7s;
@@ -190,61 +198,68 @@ button:hover {
     transform: scale(1.5);
 
 }
-#shotRangeContainer i{
+
+#shotRangeContainer i {
     font-size: 20px;
-    color: red; 
+    color: red;
     padding: 1em;
     position: absolute;
     top: 49px;
     right: 20px;
 
 }
-#aboutYou{
+
+#aboutYou {
     position: absolute;
     right: 300px;
     bottom: 150px;
     transform: scale(1.5);
     background-color: black;
-    
-    
+
+
 }
-#aboutYou:hover{
+
+#aboutYou:hover {
     background-color: white;
     box-shadow: 0 0 100px white;
     color: black;
     transition: 0.7s;
 }
-#idk{
+
+#idk {
     position: absolute;
     bottom: 450px;
     left: 300px;
-   background-color: wheat;
-   color: #000;
+    background-color: wheat;
+    color: #000;
     font-size: large;
 }
-#idk:hover{
-   background-color: #000;
-   color: white;
-   
+
+#idk:hover {
+    background-color: #000;
+    color: white;
+
 }
-#textForIDK{
+
+#textForIDK {
     display: none;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  position: relative;
-  bottom:  400px;
-  right: -20px;
-  width: 1000px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    bottom: 400px;
+    right: -20px;
+    width: 1000px;
     height: auto;
-    color: white; 
+    color: white;
     padding: 5px;
     transform: scale(2);
     transition: .5s;
     text-align: center;
-    
+
 }
-#paragraph{
+
+#paragraph {
     color: white;
     padding: 20px;
     display: flex;
@@ -626,7 +641,7 @@ i {
     position: absolute;
     top: 680px;
     left: 600px;
-padding: 1em;
+    padding: 1em;
     gap: 10px;
     justify-content: center;
     align-items: center;
@@ -683,7 +698,7 @@ padding: 1em;
     margin: auto;
     width: 115px;
     text-align: center;
- box-shadow: 0 0 70px blueviolet;
+    box-shadow: 0 0 70px blueviolet;
     color: white;
     padding: 1em;
     border: 3px solid #333;
