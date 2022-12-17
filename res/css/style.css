@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-
+@media screen and (max-width: 758px){
+    *{
+        font-size: small;
+    }
+    body{
+        width: 100%;
+        height: auto;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+       opacity: 0;
+       background-color: #000;
+    }
+    button{
+        display: none;
+    }
+    #backButtonProblem{
+        opacity: 0;
+    }
+    
+    
+}
 
 * {
     user-select: none;
