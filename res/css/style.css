@@ -228,8 +228,9 @@ button:hover {
 
 #idk {
     position: absolute;
+    transform: scale(1);
     bottom: 450px;
-    left: 300px;
+    left: 265px;
     background-color: wheat;
     color: #000;
     font-size: large;
@@ -877,13 +878,44 @@ i {
 
 #time {
     position: absolute;
-    right: 5px;
+    right: 10px;
     bottom: 0px;
   background-color: transparent;
   border: none;
+  display: block;
 }
 #time:hover{
     cursor: default;
     box-shadow: 0 0 0px white;
     color: white;
+}
+
+#creator{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    gap: 0px;
+
+}
+#creator .fa-brands {
+   height: 60px;
+   width: 60px;
+    height: auto;
+    transform: scale(0.3);
+    padding: 0;
+    color: rgba(255, 255, 255, 0.533);
+    transition: .5s;
+}
+#creator .fa-brands:hover {
+    transform: scale(0.4);
+    color: rgb(255, 255, 255);
+}
+#creator a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
 }
