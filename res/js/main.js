@@ -80,7 +80,10 @@ idk.onclick = () => {
   textForIDK.style.display = "flex";
 
   const quotes = setInterval(() => {
-    if(backButton.style.display == "none" && draezlyrImage.style.display == "block"){
+    if (
+      backButton.style.display == "none" &&
+      draezlyrImage.style.display == "block"
+    ) {
       yourXP += 0;
       xp.innerHTML = `your current xp: ${yourXP}`;
       clearInterval(quotes);
@@ -179,10 +182,9 @@ idk.onclick = () => {
       paragraph.style.color = "red";
       yourXP += 20;
       xp.innerHTML = `your current xp: ${yourXP}`;
-  } 
-    }, 2000);
+    }
+  }, 2000);
 };
-
 
 musicButton.onclick = () => {
   music.src = "https://www.youtube.com/embed/_k98FiylD2M?autoplay=1&loop=1";
@@ -1061,7 +1063,6 @@ portalsWarningContinue.onclick = () => {
 };
 
 backButton.onclick = () => {
-
   time.style.display = "block";
   creator.style.display = "flex";
   document.body.style.animation = "none";
@@ -1183,11 +1184,9 @@ function movetarget() {
 
 movetarget();
 
-
-const timer = time.onclick = () => {
+const timer = (time.onclick = () => {
   document.getElementById("time").innerHTML = Date();
-  
-}
+});
 setInterval(() => {
   timer();
 }, 1000);
