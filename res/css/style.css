@@ -919,3 +919,18 @@ i {
     margin: 0;
     text-decoration: none;
 }
+#creatorHeadline{
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    transition: .5s;
+}
+#creatorHeadline:hover{
+   color: rgb(178, 131, 223);
+   transition: .5s;
+}
+#creatorContent{
+    display: none;
+}

@@ -51,8 +51,23 @@ const idk = document.getElementById("idk");
 const textForIDK = document.getElementById("textForIDK");
 const paragraph = document.getElementById("paragraph");
 
+const creatorHeadline = document.getElementById("creatorHeadline");
+const creatorContent = document.getElementById("creatorContent");
+
+const loader = document.getElementById("loader");
+
+
+
+creatorHeadline.onclick = () => {
+  creatorContent.style.display = "block";
+  creatorHeadline.style.display = "none";
+}
+
+
+
 const all = setInterval(() => {
   document.body.style.opacity = "1";
+  loader.style.opacity = "1";
 }, 300);
 
 idk.onclick = () => {
