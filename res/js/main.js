@@ -51,6 +51,12 @@ const idk = document.getElementById("idk");
 const textForIDK = document.getElementById("textForIDK");
 const paragraph = document.getElementById("paragraph");
 
+const stars = document.getElementById("stars");
+
+if (backButton.style.display == "block") {
+  stars.style.display = "none";
+}
+
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 
@@ -71,7 +77,6 @@ creatorHeadline.onclick = () => {
 
 const all = setInterval(() => {
   document.body.style.opacity = "1";
-  loader.style.opacity = "1";
 }, 300);
 
 idk.onclick = () => {
@@ -97,6 +102,7 @@ idk.onclick = () => {
   enemy1.style.display = "none";
   info.style.display = "none";
   textForIDK.style.display = "flex";
+  stars.style.display = "none";
 
   const quotes = setInterval(() => {
     if (
@@ -305,13 +311,14 @@ upgradeHealth.onclick = () => {
   document.body.style.backgroundColor = "black";
   document.body.style.borderLeft = "5px solid rgba(137, 43, 226, 0.71)";
   document.body.style.borderRight = "5px solid rgba(137, 43, 226, 0.71)";
+  stars.style.display = "none";
 };
 upgradeDamage.onclick = () => {
   damage = 1;
   damage = damageUP;
   damageUP += 10;
   yourXP -= xpPrice;
-
+  stars.style.display = "none";
   heroAttack.style.animation = "rune 1s infinite alternate linear";
   heroIdle.style.animation = "rune 1s infinite alternate linear";
 
@@ -358,7 +365,7 @@ upgradeRegeneration.onclick = () => {
   regeneration += 10;
   yourXP -= xpPrice;
   xpPrice += xpPriceIncrease;
-
+  stars.style.display = "none";
   heroAttack.style.animation = "rune 1s infinite alternate linear";
   heroIdle.style.animation = "rune 1s infinite alternate linear";
 
@@ -508,6 +515,7 @@ kingOfHeaven.onmouseup = () => {
 };
 
 equip.onclick = () => {
+  stars.style.display = "none";
   time.style.display = "none";
   creator.style.display = "none";
   aboutdraezlyr.style.display = "none";
@@ -621,6 +629,7 @@ equip.onclick = () => {
   }
 };
 merchant.onclick = () => {
+  stars.style.display = "none";
   aboutdraezlyr.style.display = "none";
   merchantOffers.style.display = "flex";
   mainHeadLine.style.display = "none";
@@ -643,6 +652,7 @@ merchant.onclick = () => {
   clearInterval(myInterval);
 };
 shottingRange.onclick = () => {
+  stars.style.display = "none";
   aboutdraezlyr.style.display = "none";
   merchantOffers.style.display = "none";
   mainHeadLine.style.display = "none";
@@ -665,6 +675,7 @@ shottingRange.onclick = () => {
   info.style.display = "none";
 };
 aboutYou.onclick = () => {
+  stars.style.display = "none";
   aboutdraezlyr.style.display = "none";
   creator.style.display = "none";
   backButton.style.display = "block";
@@ -691,6 +702,7 @@ aboutYou.onclick = () => {
 };
 
 portals.onclick = () => {
+  stars.style.display = "none";
   time.style.display = "none";
   creator.style.display = "none";
   theheaven.style.display = "block";
@@ -749,6 +761,7 @@ theheaven.onmouseout = () => {
   theheaven.style.transform = "scale(0.4)";
 };
 thehell.onclick = () => {
+  stars.style.display = "none";
   music.src = "https://www.youtube.com/embed/EQmIBHObtCs?autoplay=1&loop=1";
   musicButton.style.transform = "scale(1.2)";
   musicButton.style.color = "#333";
@@ -894,6 +907,7 @@ thehell.onclick = () => {
 };
 
 theheaven.onclick = () => {
+  stars.style.display = "none";
   if (yourXP >= 150) {
     yourXP -= 10;
     xp.innerHTML = `YOUR CURRENT XP: ${yourXP}`;
@@ -1046,6 +1060,7 @@ theheaven.onclick = () => {
 };
 
 portalsWarningContinue.onclick = () => {
+  stars.style.display = "block";
   time.style.display = "block";
   creator.style.display = "flex";
   portalsWarning.style.display = "none";
@@ -1082,6 +1097,7 @@ portalsWarningContinue.onclick = () => {
 };
 
 backButton.onclick = () => {
+  stars.style.display = "block";
   time.style.display = "block";
   creator.style.display = "flex";
   document.body.style.animation = "none";
@@ -1138,8 +1154,8 @@ backButton.onclick = () => {
 
 coral.onclick = () => {
   backButton.style.display = "block";
+  stars.style.display = "none";
   aboutYouContainer.style.display = "none";
-
   musicButton.style.display = "block";
   document.body.style.backgroundImage = "url(./res/img/coralos.png)";
   document.body.style.backgroundAttachment = "fixed";
