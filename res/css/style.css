@@ -54,7 +54,17 @@ body {
     height: 100vh;
     overflow: hidden;
     opacity: 0;
+    
 }
+/*.cursor{
+    width: 20px;
+    height: 20px;
+    border: 1px solid blueviolet;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+    position: absolute;
+    transition: 500ms ease-out;
+}*/
 
 #aboutYouContainer {
     display: none;
@@ -934,3 +944,4 @@ i {
 #creatorContent{
     display: none;
 }
+
