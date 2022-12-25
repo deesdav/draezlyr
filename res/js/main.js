@@ -53,6 +53,10 @@ const paragraph = document.getElementById("paragraph");
 
 const stars = document.getElementById("stars");
 
+const clickUpgradeH = document.getElementById("clickUpgradeH");
+const clickUpgradeD = document.getElementById("clickUpgradeD");
+const clickUpgradeR = document.getElementById("clickUpgradeR");
+
 if (backButton.style.display == "block") {
   stars.style.display = "none";
 }
@@ -270,7 +274,7 @@ upgradeHealth.onclick = () => {
   basicHP += 0;
   yourXP -= xpPrice;
   xpPrice += xpPriceIncrease;
-
+  clickUpgradeH.innerHTML ++;
   heroAttack.style.animation = "rune 1s infinite alternate linear";
   heroIdle.style.animation = "rune 1s infinite alternate linear";
 
@@ -286,7 +290,7 @@ upgradeHealth.onclick = () => {
   equip.style.display = "block";
   merchant.style.display = "none";
   shottingRange.style.display = "none";
-
+  creator.style.display = "block";
   aboutdraezlyr.style.display = "block";
   mainHeadLine.style.display = "block";
   draezlyrImage.style.display = "block";
@@ -318,6 +322,7 @@ upgradeDamage.onclick = () => {
   damage = damageUP;
   damageUP += 10;
   yourXP -= xpPrice;
+  clickUpgradeD.innerHTML ++;
   stars.style.display = "none";
   heroAttack.style.animation = "rune 1s infinite alternate linear";
   heroIdle.style.animation = "rune 1s infinite alternate linear";
@@ -335,7 +340,7 @@ upgradeDamage.onclick = () => {
   equip.style.display = "block";
   merchant.style.display = "none";
   shottingRange.style.display = "none";
-
+  creator.style.display = "block";
   aboutdraezlyr.style.display = "block";
   mainHeadLine.style.display = "block";
   draezlyrImage.style.display = "block";
@@ -365,6 +370,7 @@ upgradeRegeneration.onclick = () => {
   regeneration += 10;
   yourXP -= xpPrice;
   xpPrice += xpPriceIncrease;
+  clickUpgradeR.innerHTML ++;
   stars.style.display = "none";
   heroAttack.style.animation = "rune 1s infinite alternate linear";
   heroIdle.style.animation = "rune 1s infinite alternate linear";
@@ -381,7 +387,7 @@ upgradeRegeneration.onclick = () => {
   equip.style.display = "block";
   merchant.style.display = "none";
   shottingRange.style.display = "none";
-
+  creator.style.display = "block";
   aboutdraezlyr.style.display = "block";
   mainHeadLine.style.display = "block";
   draezlyrImage.style.display = "block";
@@ -630,6 +636,7 @@ equip.onclick = () => {
 };
 merchant.onclick = () => {
   stars.style.display = "none";
+  creator.style.display = "none";
   aboutdraezlyr.style.display = "none";
   merchantOffers.style.display = "flex";
   mainHeadLine.style.display = "none";

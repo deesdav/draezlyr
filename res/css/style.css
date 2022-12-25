@@ -550,6 +550,10 @@ button:hover {
     font-weight: 900;
     text-transform: uppercase;
     display: block;
+    cursor: wait;
+}
+h2, h3, p{
+    cursor: text;
 }
 
 #enemy1HP {
@@ -627,6 +631,7 @@ i {
     width: 320px;
     font-weight: 900;
     transform: scale(1.1);
+    cursor: text;
 }
 
 #backButtonProblem a {
@@ -707,7 +712,7 @@ i {
 #round {
     display: none;
     margin: auto;
-    width: 115px;
+    width: 120px;
     text-align: center;
     box-shadow: 0 0 70px blueviolet;
     color: white;
@@ -954,6 +959,7 @@ i {
     flex-direction: row;
     transition: .5s;
     display: block;
+    cursor: default;
 }
 #stars i {
     color: white;
@@ -968,4 +974,5 @@ i {
    transform: scale(1.1);
    color: red;
    transition: .5s;
+   cursor: help;
 }
