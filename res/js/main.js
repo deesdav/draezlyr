@@ -795,7 +795,7 @@ thehell.onclick = () => {
   yourHP.innerText = basicHP;
   enemy1HP.style.display = "block";
   practiseRound.style.display = "none";
-  enemy1HP.innerHTML = 500;
+  enemy1HP.innerHTML = 5000;
   info.style.display = "none";
   backButtonProblem.style.display = "none";
   twoPortals.style.display = "none";
@@ -945,7 +945,7 @@ theheaven.onclick = () => {
     yourHP.innerText = basicHP;
     enemy1HP.style.display = "block";
     practiseRound.style.display = "none";
-    enemy1HP.innerHTML = 2500;
+    enemy1HP.innerHTML = 25000;
     info.style.display = "none";
     backButtonProblem.style.display = "none";
     twoPortals.style.display = "none";
