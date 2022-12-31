@@ -64,7 +64,7 @@ if (backButton.style.display == "block") {
 const creatorHeadline = document.getElementById("creatorHeadline");
 const creatorContent = document.getElementById("creatorContent");
 
-//const cursor = document.querySelector('.cursor');
+const cursor = document.querySelector('.cursor');
 
 //document.addEventListener('mousemove', e => {
 //cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: "+ (e.pageX - 10) + "px;");
@@ -235,7 +235,7 @@ let basicHP = 50;
 let enemyBasicHP = 5;
 let regeneration = 1;
 let damageUP = 0;
-let damage = 5;
+let damage = 2.5;
 let xpPrice = 40;
 let xpPriceIncrease = 0;
 let xpIncrease = 10;
@@ -1220,8 +1220,14 @@ squares.forEach((square) => {
   });
 });
 
+let clickToFast = 500;
+
+squares.onclick = () => {
+  clickToFast += 10;
+}
+
 function movetarget() {
-  timerId = setInterval(randomSquare, 500);
+  timerId = setInterval(randomSquare, clickToFast);
 }
 
 movetarget();

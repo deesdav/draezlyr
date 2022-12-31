@@ -768,6 +768,7 @@ i {
     border: 3px solid gold;
 }
 
+
 .target {
     background-image: url(../img/enemy1.png);
     background-size: cover;
@@ -786,7 +787,7 @@ i {
     display: none;
     margin: auto;
     position: absolute;
-    left: 680px;
+    left: 670px;
     top: 350px;
     width: 700px;
     height: 240px;
