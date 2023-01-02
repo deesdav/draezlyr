@@ -258,6 +258,11 @@ if (yourXP >= 60) {
 } else {
   shottingRange.style.display = "none";
 }
+if (yourXP >= 10) {
+  idk.style.display = "block";
+} else {
+  idk.style.display = "none";
+}
 
 //if(yourXP < xpPrice){
 //   upgradeHealth.style.display = "none";
@@ -620,6 +625,11 @@ equip.onclick = () => {
   } else {
     shottingRange.style.display = "none";
   }
+  if (yourXP >= 10) {
+    idk.style.display = "block";
+  } else {
+    idk.style.display = "none";
+  }
   if ((practiseRound.style.display = "none")) {
     equip.style.marginTop += "30px";
     aboutdraezlyr.style.height = "550px";
@@ -911,6 +921,11 @@ thehell.onclick = () => {
   } else {
     shottingRange.style.display = "none";
   }
+  if (yourXP >= 10) {
+    idk.style.display = "block";
+  } else {
+    idk.style.display = "none";
+  }
   if ((practiseRound.style.display = "none")) {
     equip.style.marginTop += "30px";
     aboutdraezlyr.style.height = "550px";
@@ -1063,6 +1078,11 @@ theheaven.onclick = () => {
     } else {
       shottingRange.style.display = "none";
     }
+    if (yourXP >= 10) {
+      idk.style.display = "block";
+    } else {
+      idk.style.display = "none";
+    }
     if ((practiseRound.style.display = "none")) {
       equip.style.marginTop += "30px";
       aboutdraezlyr.style.height = "550px";
@@ -1155,6 +1175,11 @@ backButton.onclick = () => {
     shottingRange.style.display = "block";
   } else {
     shottingRange.style.display = "none";
+  }
+  if (yourXP >= 20) {
+    idk.style.display = "block";
+  } else {
+    idk.style.display = "none";
   }
   document.body.style.backgroundAttachment = "none";
   document.body.style.backgroundPosition = "bottom";
