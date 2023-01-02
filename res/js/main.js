@@ -71,6 +71,10 @@ const cursor = document.querySelector('.cursor');
 //
 //})
 
+if (document.body.style.maxWidth <= 758) {
+  alert("Draezlyr game is not for mobiles.")
+}
+
 
 creatorHeadline.onclick = () => {
   creatorContent.style.display = "block";

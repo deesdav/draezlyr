@@ -8,18 +8,20 @@
     body {
         width: 100%;
         height: auto;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        opacity: 0;
+       border: none;
+      display: none;
         background-color: #000;
+        border-left: 5px solid rgba(255, 255, 255, 0.71);
+        border-right: 5px solid rgba(255, 255, 255, 0.71);
+     
     }
 
     button {
         display: none;
     }
 
-    #backButtonProblem {
-        opacity: 0;
+    #aboutdraezlyr, #backButtonProblem, #mainHeadLine, #stars, #xp, #time, #creator{
+       opacity: 0;
     }
 
 
@@ -45,16 +47,16 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    border-left: 5px solid rgba(137, 43, 226, 0.71);
-    border-right: 5px solid rgba(137, 43, 226, 0.71);
-    border-bottom: none;
+  border-bottom: none;
     border-top: none;
     border-radius: 1em;
     color: black;
     height: 100vh;
     overflow: hidden;
     opacity: 0;
-    
+    border-left: 5px solid rgba(137, 43, 226, 0.71);
+    border-right: 5px solid rgba(137, 43, 226, 0.71);
+   
 }
 /*.cursor{
     width: 20px;
