@@ -329,7 +329,7 @@ upgradeHealth.onclick = () => {
 upgradeDamage.onclick = () => {
   damage = 1;
   damage = damageUP;
-  damageUP += 10;
+  damageUP += 2.5;
   yourXP -= xpPrice;
   clickUpgradeD.innerHTML ++;
   stars.style.display = "none";
